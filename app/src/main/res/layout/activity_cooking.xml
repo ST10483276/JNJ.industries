@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CookingActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:orientation="vertical">
+
+
+        <ImageButton
+            android:id="@+id/homeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="316dp"
+            android:layout_gravity="start"
+            android:layout_marginBottom="44dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Go to Home"
+            android:src="@drawable/logoimage" />
+
+        <TextView
+            android:layout_width="237dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="9dp"
+            android:text="SEWING"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fee: R750"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="309dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Purpose: To prepare and cook nutritious family meals"
+            android:textSize="17sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Content:"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="5dp"
+            android:text="-  Nutritional requirements for a healthy body \n- Types of protein, carbohydrates and vegetables \n- Planning meals  \n- Tasty and nutritious recipes \n-Preparation and cooking of meals"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+
+</ScrollView>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CourseDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- six- Month Courses Button -->
+
+        <ImageButton
+            android:id="@+id/btnHomeScreen"
+            android:layout_width="395dp"
+            android:layout_height="312dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="30dp"
+            android:src="@drawable/logoimage"
+
+            >
+
+        </ImageButton>
+
+        <Button
+            android:id="@+id/btnSixMonths"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_arrow_drop_down"
+            android:drawablePadding="8dp"
+            android:text="SIX-MONTH COURSES" />
+
+        <!-- List of Six-Month Courses -->
+        <LinearLayout
+            android:id="@+id/layoutSixMonthsCourses"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/btnFirstAid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_arrow_forward"
+                android:drawablePadding="8dp"
+                android:text="First Aid" />
+
+            <Button
+                android:id="@+id/btnSewing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_arrow_forward"
+                android:drawablePadding="8dp"
+                android:text="Sewing" />
+
+            <Button
+                android:id="@+id/btnLandscaping"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_arrow_forward"
+                android:drawablePadding="8dp"
+                android:text="Landscaping" />
+
+            <Button
+                android:id="@+id/btnLifeSkills"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_arrow_forward"
+                android:drawablePadding="8dp"
+                android:text="LifeSkills" />
+        </LinearLayout>
+
+        <!-- Six-Week Courses Button -->
+        <Button
+            android:id="@+id/btnSixWeeks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_arrow_drop_down"
+            android:drawablePadding="8dp"
+            android:text="SIX-WEEK SHORT COURSES" />
+
+        <!-- List of 6-Week Courses -->
+        <LinearLayout
+            android:id="@+id/layoutSixWeeksCourses"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/btnChildMinding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_arrow_forward"
+                android:drawablePadding="8dp"
+                android:text="Child Minding" />
+
+            <Button
+                android:id="@+id/btnCooking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_arrow_forward"
+                android:drawablePadding="8dp"
+                android:text="Cooking" />
+
+            <Button
+                android:id="@+id/btnGardenMain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_arrow_forward"
+                android:drawablePadding="8dp"
+                android:text="Garden Maintenance" />
+
+
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="64dp"
+            android:layout_height="56dp"
+            android:src="@drawable/arrow_back_ios_new" />
+
+
+    </LinearLayout>
+
+
+</ScrollView>

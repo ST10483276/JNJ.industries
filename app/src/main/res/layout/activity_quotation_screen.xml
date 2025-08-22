@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".QuotationScreenActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/arrow_back_ios_new"
+                android:contentDescription="Back to men"
+                android:background="@color/white"
+
+                />
+
+
+            <!-- Quotation Header -->
+            <TextView
+                android:id="@+id/txtQuoteHeader"
+                android:layout_width="221dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:gravity="left|center"
+                android:paddingBottom="16dp"
+                android:text="Training Quotation"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+
+
+        </LinearLayout>
+
+
+
+        <!-- Selected Courses -->
+        <TextView
+            android:id="@+id/txtSelectedCourses"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Selected Courses"
+            android:textSize="16sp"
+            android:contentDescription="Back to men"
+            android:padding="12dp"
+            android:background="@android:color/darker_gray"
+            android:textColor="@android:color/white"/>
+
+        <!-- Total Breakdown -->
+        <TextView
+            android:id="@+id/txtBreakdown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Breakdown will appear here"
+            android:padding="12dp"
+            android:background="@android:color/white"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Customer Details -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter Your Details"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/edtName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Full Name"
+            android:padding="10dp"
+            android:background="@android:drawable/edit_text"/>
+
+        <EditText
+            android:id="@+id/edtPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone Number"
+            android:inputType="phone"
+            android:padding="10dp"
+            android:background="@android:drawable/edit_text"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/edtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email Address"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:background="@android:drawable/edit_text"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:id="@+id/btnConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Confirm and Submit"
+            android:layout_marginTop="20dp"/>
+    </LinearLayout>
+
+</ScrollView>

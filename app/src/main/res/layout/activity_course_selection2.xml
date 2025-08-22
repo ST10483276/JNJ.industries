@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CourseSelectionActivity2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Courses"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingBottom="12dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Six-MONTH COURSES"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:paddingBottom="12dp"/>
+
+        <CheckBox
+            android:id="@+id/ChkFirstAid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="First Aid: R1500" />
+
+        <CheckBox
+            android:id="@+id/ChkSewing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sewing: R1500" />
+
+        <CheckBox
+            android:id="@+id/ChkLandscaping"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Landscaping: R1500" />
+
+        <CheckBox
+            android:id="@+id/ChkLifeSkills"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Life Skills: R1500" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Six-WEEK SHORT COURSES "
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:paddingBottom="12dp"/>
+
+        <CheckBox
+            android:id="@+id/ChkChildMinding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Child Minding: R750" />
+
+        <CheckBox
+            android:id="@+id/chkCourse6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Excel Mastery (R2500)" />
+
+        <CheckBox
+            android:id="@+id/ChkCooking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cooking: R750" />
+
+        <CheckBox
+            android:id="@+id/ChkGardenMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Garden Maintenance: R750" />
+
+        <Button
+            android:id="@+id/btnProceed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calculate Cost"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/txtDiscountNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Discount Rules:\n• one course – No discount\n• Two courses – 5% discount\n• Three courses – 10% discount\n•More than three courses – 15% discount"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"/>
+
+    </LinearLayout>
+
+</ScrollView>
