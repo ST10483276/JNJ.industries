@@ -14,16 +14,48 @@
         android:padding="16dp"
         android:orientation="vertical">
 
+        <!-- Linear layout for the two Image button -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <ImageButton
+                android:id="@id/btnBack"
+                android:layout_width="74dp"
+                android:layout_height="56dp"
+                android:contentDescription="Back to men"
+                android:backgroundTint="@color/white"
+                android:src="@drawable/arrow_back_ios_new"
+
+                />
+
+            <ImageButton
+                android:id="@+id/homeButton"
+                android:layout_width="74dp"
+                android:layout_height="56dp"
+                android:layout_marginLeft="215dp"
+                android:contentDescription="Back to home Button "
+                android:src="@drawable/baseline_home_24"
+                android:backgroundTint="@color/white"
+
+
+                />
+        </LinearLayout>
+
+
+
 
         <ImageButton
-            android:id="@+id/homeButton"
+            android:id="@+id/imgSewing"
             android:layout_width="wrap_content"
             android:layout_height="316dp"
             android:layout_gravity="start"
             android:layout_marginBottom="44dp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:contentDescription="Go to Home"
-            android:src="@drawable/logoimage" />
+            android:src="@drawable/sewing" />
 
         <TextView
             android:layout_width="237dp"

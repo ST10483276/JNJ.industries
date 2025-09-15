@@ -22,9 +22,9 @@
                 android:id="@+id/btnBack"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/arrow_back_ios_new"
-                android:contentDescription="Back to men"
                 android:background="@color/white"
+                android:contentDescription="Back to men"
+                android:src="@drawable/arrow_back_ios_new"
 
                 />
 
@@ -32,9 +32,10 @@
             <!-- Quotation Header -->
             <TextView
                 android:id="@+id/txtQuoteHeader"
-                android:layout_width="221dp"
+                android:layout_width="211dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="40dp"
+                android:layout_marginTop="40dp"
                 android:gravity="left|center"
                 android:paddingBottom="16dp"
                 android:text="Training Quotation"
@@ -42,76 +43,76 @@
                 android:textStyle="bold" />
 
 
-
         </LinearLayout>
-
 
 
         <!-- Selected Courses -->
         <TextView
-            android:id="@+id/txtSelectedCourses"
+            android:id="@+id/txSelectedCourses"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Selected Courses"
-            android:textSize="16sp"
+            android:layout_marginTop="40dp"
+            android:background="@android:color/darker_gray"
             android:contentDescription="Back to men"
             android:padding="12dp"
-            android:background="@android:color/darker_gray"
-            android:textColor="@android:color/white"/>
+            android:text="Selected Courses"
+            android:textColor="@android:color/black"
+            android:textSize="24sp" />
 
         <!-- Total Breakdown -->
         <TextView
             android:id="@+id/txtBreakdown"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Breakdown will appear here"
-            android:padding="12dp"
+            android:layout_marginBottom="20dp"
             android:background="@android:color/white"
-            android:layout_marginBottom="20dp"/>
+            android:padding="12dp"
+            android:text="Breakdown will appear here"
+            android:textSize="18sp" />
 
         <!-- Customer Details -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
             android:text="Enter Your Details"
             android:textSize="18sp"
-            android:textStyle="bold"
-            android:paddingBottom="8dp"/>
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/edtName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@android:drawable/edit_text"
             android:hint="Full Name"
-            android:padding="10dp"
-            android:background="@android:drawable/edit_text"/>
+            android:padding="10dp" />
 
         <EditText
             android:id="@+id/edtPhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@android:drawable/edit_text"
             android:hint="Phone Number"
             android:inputType="phone"
-            android:padding="10dp"
-            android:background="@android:drawable/edit_text"
-            android:layout_marginTop="10dp"/>
+            android:padding="10dp" />
 
         <EditText
             android:id="@+id/edtEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@android:drawable/edit_text"
             android:hint="Email Address"
             android:inputType="textEmailAddress"
-            android:padding="10dp"
-            android:background="@android:drawable/edit_text"
-            android:layout_marginTop="10dp"/>
+            android:padding="10dp" />
 
         <Button
             android:id="@+id/btnConfirm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Confirm and Submit"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="20dp"
+            android:text="Confirm and Submit" />
     </LinearLayout>
 
 </ScrollView>

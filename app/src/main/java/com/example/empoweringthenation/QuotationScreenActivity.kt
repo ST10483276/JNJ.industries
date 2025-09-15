@@ -10,8 +10,6 @@ import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import kotlin.math.roundToInt
 
 class QuotationScreenActivity : AppCompatActivity() {
@@ -23,7 +21,7 @@ class QuotationScreenActivity : AppCompatActivity() {
         val selectedCourses = intent.getStringArrayListExtra("SELECTED_COURSES") ?: arrayListOf()
         val totalPrice = intent.getIntExtra("TOTAL_PRICE", 0)
 
-        val txtSelected = findViewById<TextView>(R.id.txtSelectedCourses)
+        val txtSelected = findViewById<TextView>(R.id.txSelectedCourses)
         val txtBreakdown = findViewById<TextView>(R.id.txtBreakdown)
 
         val edtName = findViewById<EditText>(R.id.edtName)
@@ -81,12 +79,13 @@ class QuotationScreenActivity : AppCompatActivity() {
             // Display Thank You Message
             AlertDialog.Builder(this)
                 .setTitle("Enquiry Submitted")
-                .setMessage("Thank you $name for your enquiry!\n\nWe will contact you shortly at:\n $phone\n $email")
+                .setMessage("Thank you $name for your enquiry!\n\nWe will contact you shortly at:\n $phone\n $email \n" +
+                        "\nFor more details, please visit our Contact page.")
                 .setPositiveButton("OK") { dialog, _ ->
                     dialog.dismiss()
 
                     // After confirming, return to selection page & clear selections
-                    val intent = Intent(this, HomeScreenActivity::class.java)
+                    val intent = Intent(this, ContactUsActivity::class.java)
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP) // ensures we return clean
                     startActivity(intent)
                 }

@@ -15,12 +15,14 @@
 
         <!-- six- Month Courses Button -->
 
+
         <ImageButton
             android:id="@+id/btnHomeScreen"
             android:layout_width="395dp"
             android:layout_height="312dp"
             android:layout_gravity="center"
             android:layout_marginBottom="30dp"
+
             android:src="@drawable/logoimage"
 
             >
@@ -31,6 +33,7 @@
             android:id="@+id/btnSixMonths"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/blue"
             android:drawableEnd="@drawable/ic_arrow_drop_down"
             android:drawablePadding="8dp"
             android:text="SIX-MONTH COURSES" />
@@ -84,6 +87,7 @@
             android:layout_height="wrap_content"
             android:drawableEnd="@drawable/ic_arrow_drop_down"
             android:drawablePadding="8dp"
+            android:backgroundTint="@color/blue"
             android:text="SIX-WEEK SHORT COURSES" />
 
         <!-- List of 6-Week Courses -->
@@ -123,12 +127,16 @@
 
         </LinearLayout>
 
-        <ImageButton
-            android:id="@+id/btnBack"
-            android:layout_width="64dp"
-            android:layout_height="56dp"
-            android:src="@drawable/arrow_back_ios_new" />
+<Button
+    android:id="@+id/BtnCourseSelection"
+    android:layout_width="match_parent"
+    android:text="Course Selection"
+    android:layout_marginTop="55dp"
+    android:backgroundTint="@color/gray"
+    android:textSize="22sp"
+    android:layout_height="wrap_content">
 
+</Button>
 
     </LinearLayout>
 

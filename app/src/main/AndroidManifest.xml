@@ -13,10 +13,19 @@
         android:theme="@style/Theme.EmpoweringTheNation"
         tools:targetApi="31">
         <activity
-            android:name=".QuotationScreenActivity"
+            android:name=".loginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ContactUsActivity"
             android:exported="false" />
         <activity
             android:name=".CourseDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".QuotationScreenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CourseSelectionActivity2"
             android:exported="false" />
         <activity
             android:name=".LifeSkillsActivity"
@@ -40,16 +49,10 @@
             android:name=".ChildMindingActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".HomeScreenActivity"
-            android:exported="false" />
-        <activity
-            android:name=".RegistrationScreenActivity"
-            android:exported="false" />
-        <activity
-            android:name=".CourseSelectionActivity2"
+            android:name=".SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

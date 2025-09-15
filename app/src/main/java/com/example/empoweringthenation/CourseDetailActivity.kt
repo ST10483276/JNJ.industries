@@ -8,8 +8,6 @@ import android.widget.ImageButton
 import android.widget.LinearLayout
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
 
 class CourseDetailActivity : AppCompatActivity() {
@@ -18,7 +16,8 @@ class CourseDetailActivity : AppCompatActivity() {
     private lateinit var btnSixMonths: Button
     private lateinit var btnSixWeeks: Button
     private lateinit var btnHomeScreen: ImageButton
-    private lateinit var btnBack:ImageButton
+    private lateinit var BtnCourseSelction:Button
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,16 +30,24 @@ class CourseDetailActivity : AppCompatActivity() {
         btnSixMonths = findViewById(R.id.btnSixMonths)
         btnSixWeeks = findViewById(R.id.btnSixWeeks)
         btnHomeScreen = findViewById(R.id.btnHomeScreen)
-        btnBack=findViewById(R.id.btnBack)
+        BtnCourseSelction=findViewById(R.id.BtnCourseSelection)
 
-        btnBack.setOnClickListener{
-            finish() // closes the list
-        }
-
-        btnHomeScreen.setOnClickListener {
-            val intent = Intent(this, HomeScreenActivity::class.java)
+        BtnCourseSelction.setOnClickListener{
+            val intent = Intent(this,CourseSelectionActivity2::class.java)
             startActivity(intent)
         }
+
+        btnHomeScreen.setOnClickListener{
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
+        }
+
+
+        btnHomeScreen.setOnClickListener {
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
+        }
+
 
         btnSixMonths.setOnClickListener {
             toggleVisibility(layoutSixMonths, btnSixMonths)
