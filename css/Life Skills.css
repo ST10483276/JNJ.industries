@@ -12,7 +12,7 @@ li {
 }
 li a {
   display: block;
-  color: white;
+  color: rgb(0, 0, 0);
   text-align: center;
   font-weight: bolder;
   padding: 14px 16px;
@@ -25,9 +25,10 @@ li a:hover {
 
 
 
+
 body {
         font-family: Arial, sans-serif;
-        background-color: #f0f0f0;
+        background-color: #ffffff;
     }
 /* Footer */
     footer{
