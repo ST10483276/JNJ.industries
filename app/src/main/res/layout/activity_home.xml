@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="16dp"
     tools:context=".HomeActivity">
 
     <ImageView
@@ -12,27 +15,33 @@
         android:layout_width="430dp"
         android:layout_height="343dp"
         android:background="@drawable/logoimage"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.15" />
+        />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="302dp"
+        android:layout_height="29dp"
+        android:text="Empowering Skills. Building Futures."
+        android:textAlignment="center"
+        android:textColor="#003366"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        tools:ignore="TextSizeCheck" />
 
     <TextView
         android:id="@+id/descriptionTxt"
-        android:layout_width="358dp"
-        android:layout_height="190dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="@color/gray"
         android:text="Empowering the Nation is a community-based app that helps you access practical, life-changing training in first aid, sewing, cooking, life skills, and more. Explore our courses, calculate your training fees, and find a venue near you — all in one place."
         android:textColor="@color/black"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.802" />
+        android:textSize="20sp"
+        android:lineSpacingExtra="4dp"
+        android:textAlignment="viewStart"
+        android:gravity="start"
+
+        />
 
     <Button
         android:id="@+id/startBtn"
@@ -44,27 +53,9 @@
         android:textColor="@color/white"
         android:textSize="30dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.443"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.975" />
+        android:layout_marginTop="24dp" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="302dp"
-        android:layout_height="29dp"
-        android:text="Empowering Skills. Building Futures."
-        android:textAlignment="center"
-        android:textColor="#003366"
-        android:textSize="15dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.514"
-        tools:ignore="TextSizeCheck" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

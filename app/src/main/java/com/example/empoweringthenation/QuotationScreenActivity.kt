@@ -28,7 +28,7 @@ class QuotationScreenActivity : AppCompatActivity() {
         val edtPhone = findViewById<EditText>(R.id.edtPhone)
         val edtEmail = findViewById<EditText>(R.id.edtEmail)
         val btnConfirm = findViewById<Button>(R.id.btnConfirm)
-        val btnBack=findViewById<ImageButton>(R.id.btnBack)
+
         
 
 
@@ -72,9 +72,7 @@ class QuotationScreenActivity : AppCompatActivity() {
                 Toast.makeText(this, "Please fill in all details", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
-            btnBack.setOnClickListener{
-                finish()
-            }
+
 
             // Display Thank You Message
             AlertDialog.Builder(this)

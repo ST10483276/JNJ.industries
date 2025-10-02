@@ -9,7 +9,6 @@ import androidx.core.view.WindowInsetsCompat
 
 class FirstAidActivity : AppCompatActivity() {
 
-    private lateinit var btnBack:ImageButton
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,11 +16,7 @@ class FirstAidActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_first_aid)
 
-        btnBack=findViewById(R.id.btnBack)
 
-        btnBack.setOnClickListener{
-            finish()
-        }
 
     }
 }

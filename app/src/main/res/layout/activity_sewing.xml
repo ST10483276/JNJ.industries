@@ -14,39 +14,7 @@
         android:padding="16dp"
         android:orientation="vertical">
 
-        <!-- Linear layout for the two Image button -->
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
-            <ImageButton
-                android:id="@id/btnBack"
-                android:layout_width="74dp"
-                android:layout_height="56dp"
-                android:contentDescription="Back to men"
-                android:backgroundTint="@color/white"
-                android:src="@drawable/arrow_back_ios_new"
-
-                />
-
-            <ImageButton
-                android:id="@+id/homeButton"
-                android:layout_width="74dp"
-                android:layout_height="56dp"
-                android:layout_marginLeft="215dp"
-                android:contentDescription="Back to home Button "
-                android:src="@drawable/baseline_home_24"
-                android:backgroundTint="@color/white"
-
-
-                />
-        </LinearLayout>
-
-
-
-
+        <!-- Sewing Image -->
         <ImageButton
             android:id="@+id/imgSewing"
             android:layout_width="wrap_content"
@@ -54,18 +22,19 @@
             android:layout_gravity="start"
             android:layout_marginBottom="44dp"
             android:background="?attr/selectableItemBackgroundBorderless"
-            android:contentDescription="Go to Home"
+            android:contentDescription="Sewing image"
             android:src="@drawable/sewing" />
 
+        <!-- Title -->
         <TextView
-            android:layout_width="237dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="9dp"
             android:text="Sewing"
             android:textSize="30sp"
             android:textStyle="bold" />
 
-
+        <!-- Fee -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -74,14 +43,15 @@
             android:textStyle="bold"
             android:layout_marginBottom="8dp" />
 
-
+        <!-- Purpose -->
         <TextView
-            android:layout_width="309dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:text="Purpose: To provide alterations and new garment tailoring services"
             android:textSize="17sp" />
 
+        <!-- Content Label -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -90,15 +60,12 @@
             android:textStyle="bold"
             android:layout_marginBottom="4dp" />
 
-
+        <!-- Content Details -->
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:lineSpacingExtra="5dp"
-            android:text="-  Types of stitches\n- Threading a sewing machine\n- Sewing buttons, zips, hems, and seams  \n-  Alterations\n-Designing and sewing new  garments"
+            android:text="• Types of stitches\n• Threading a sewing machine\n• Sewing buttons, zips, hems, and seams\n• Alterations\n• Designing and sewing new garments"
             android:textSize="17sp" />
     </LinearLayout>
-
-
-
 </ScrollView>

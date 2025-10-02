@@ -8,43 +8,22 @@
     android:padding="16dp"
     tools:context=".QuotationScreenActivity">
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <!-- Quotation Header -->
+        <TextView
+            android:id="@+id/txtQuoteHeader"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <ImageButton
-                android:id="@+id/btnBack"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:background="@color/white"
-                android:contentDescription="Back to men"
-                android:src="@drawable/arrow_back_ios_new"
-
-                />
-
-
-            <!-- Quotation Header -->
-            <TextView
-                android:id="@+id/txtQuoteHeader"
-                android:layout_width="211dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="40dp"
-                android:layout_marginTop="40dp"
-                android:gravity="left|center"
-                android:paddingBottom="16dp"
-                android:text="Training Quotation"
-                android:textSize="22sp"
-                android:textStyle="bold" />
-
-
-        </LinearLayout>
-
+            android:layout_marginTop="20dp"
+            android:paddingBottom="16dp"
+            android:text="Training Quotation"
+            android:textSize="22sp"
+            android:textStyle="bold" />
 
         <!-- Selected Courses -->
         <TextView
@@ -53,7 +32,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:background="@android:color/darker_gray"
-            android:contentDescription="Back to men"
             android:padding="12dp"
             android:text="Selected Courses"
             android:textColor="@android:color/black"
@@ -111,8 +89,8 @@
             android:id="@+id/btnConfirm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="#003366"
             android:layout_marginTop="20dp"
             android:text="Confirm and Submit" />
     </LinearLayout>
-
 </ScrollView>
