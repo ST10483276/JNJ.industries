@@ -16,18 +16,17 @@
         <!-- six- Month Courses Button -->
 
 
-        <ImageButton
+        <ImageView
             android:id="@+id/btnHomeScreen"
             android:layout_width="395dp"
             android:layout_height="312dp"
             android:layout_gravity="center"
             android:layout_marginBottom="30dp"
-
             android:src="@drawable/logoimage"
 
             >
 
-        </ImageButton>
+        </ImageView>
 
         <Button
             android:id="@+id/btnSixMonths"

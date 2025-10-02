@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -15,7 +16,7 @@ class CourseDetailActivity : AppCompatActivity() {
     private lateinit var layoutSixWeek: LinearLayout
     private lateinit var btnSixMonths: Button
     private lateinit var btnSixWeeks: Button
-    private lateinit var btnHomeScreen: ImageButton
+    private lateinit var btnHomeScreen: ImageView
     private lateinit var BtnCourseSelction:Button
 
 
