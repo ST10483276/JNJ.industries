@@ -1,102 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FirstAidActivity">
+
+    <!-- Main Content Area -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="16dp"
+        android:layout_height="match_parent"
         android:orientation="vertical">
-        <!-- Linear layout for the two Image button -->
-        <LinearLayout
+
+        <!-- Toolbar at the top -->
+
+        <!-- Scrollable Course Content -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
+            android:layout_height="?attr/actionBarSize"
+            android:background="#003366"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:title="First Aid Course"
+            app:titleTextColor="@android:color/white" />
 
-            <ImageButton
-                android:id="@id/btnBack"
-                android:layout_width="74dp"
-                android:layout_height="56dp"
-                android:contentDescription="Back to men"
-                android:backgroundTint="@color/white"
-                android:src="@drawable/arrow_back_ios_new"
-
-                />
-
-            <ImageButton
-                android:id="@+id/homeButton"
-                android:layout_width="74dp"
-                android:layout_height="56dp"
-                android:layout_marginLeft="215dp"
-                android:contentDescription="Back to home Button "
-                android:src="@drawable/baseline_home_24"
-                android:backgroundTint="@color/white"
-
-
-                />
-        </LinearLayout>
-
-
-        <ImageButton
-            android:id="@+id/imageFA"
-            android:layout_width="wrap_content"
-            android:layout_height="268dp"
-            android:layout_gravity="start"
-            android:layout_marginBottom="40dp"
-            android:layout_marginTop="20dp"
-            android:contentDescription="First Aid image"
-            android:src="@drawable/firstaid" />
-
-        <TextView
-            android:layout_width="341dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="9dp"
-            android:text="Course: First Aid"
-            android:textSize="30sp"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Fee: R1500"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="8dp" />
-
-
-        <TextView
-            android:layout_width="391dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:text="Purpose:To provide first aid awareness and basic life support "
-            android:textSize="17sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Content:"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="4dp" />
-
-
-        <TextView
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:lineSpacingExtra="5dp"
-            android:text="-Wounds and bleeding \n-  Burns and fractures \n-Emergency scene management \n-Cardio-Pulmonary Resuscitation (CPR) \n-Respiratory distress e.g., choking, blocked airway "
-            android:textSize="17sp" />
+            android:layout_height="match_parent">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:orientation="vertical">
 
+                <!-- First Aid Image -->
+                <ImageButton
+                    android:id="@+id/imageFA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="268dp"
+                    android:layout_gravity="start"
+                    android:layout_marginBottom="40dp"
+                    android:layout_marginTop="20dp"
+                    android:contentDescription="First Aid image"
+                    android:src="@drawable/firstaid" />
 
+                <!-- Course Title -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Course: First Aid"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="9dp" />
+
+                <!-- Fee -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fee: R1500"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Purpose -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Purpose: To provide first aid awareness and basic life support"
+                    android:textSize="17sp"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Content Label -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Content:"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="4dp" />
+
+                <!-- Course Topics -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="5dp"
+                    android:text="- Wounds and bleeding\n- Burns and fractures\n- Emergency scene management\n- Cardio-Pulmonary Resuscitation (CPR)\n- Respiratory distress e.g., choking, blocked airway"
+                    android:textSize="17sp" />
+
+            </LinearLayout>
+        </ScrollView>
     </LinearLayout>
 
+    <!-- Navigation Drawer -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:menu="@menu/nav_menu"
+        app:headerLayout="@layout/nav_header" />
 
-
-</ScrollView>
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/baseline_home_24"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_six_month"
+            android:icon="@drawable/ic_menu_course"
+            android:title="Six-Month Courses" />
+        <item
+            android:id="@+id/nav_six_week"
+            android:icon="@drawable/ic_menu_course"
+            android:title="Six-Week Courses" />
+        <item
+            android:id="@+id/nav_course_selection"
+            android:icon="@drawable/ic_menu_select"
+            android:title="Course Selection" />
+        <item
+            android:id="@+id/nav_contact"
+            android:icon="@drawable/ic_menu_contact"
+            android:title="Contact Us" />
+
+        <item
+            android:id="@+id/nav_find_us"
+            android:icon="@drawable/ic_menu_contact"
+            android:title="Find Us" />
+    </group>
+</menu>

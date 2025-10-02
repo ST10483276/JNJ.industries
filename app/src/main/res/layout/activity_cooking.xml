@@ -1,101 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CookingActivity">
 
+    <!-- Main Content Area -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="16dp"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
-
-        <!-- Linear layout for the two Image button -->
-
-        <LinearLayout
+        <!-- Toolbar -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
-            <ImageButton
-                android:id="@id/btnBack"
-                android:layout_width="74dp"
-                android:layout_height="56dp"
-                android:contentDescription="Back to men"
-                android:backgroundTint="@color/white"
-                android:src="@drawable/arrow_back_ios_new"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#003366"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:title="Cooking Course"
+            app:titleTextColor="@android:color/white" />
 
-                />
-
-            <ImageButton
-                android:id="@+id/homeButton"
-                android:layout_width="74dp"
-                android:layout_height="56dp"
-                android:layout_marginLeft="215dp"
-                android:contentDescription="Back to home Button "
-                android:src="@drawable/baseline_home_24"
-                android:backgroundTint="@color/white"
-
-
-                />
-        </LinearLayout>
-
-
-        <ImageButton
-            android:id="@+id/imgCooking"
+        <!-- Scrollable Course Content -->
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:layout_gravity="start"
-            android:layout_marginBottom="44dp"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:contentDescription="Cooking"
-            android:src="@drawable/cooking" />
+            android:layout_height="match_parent"
+            android:padding="16dp">
 
-        <TextView
-            android:layout_width="237dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="9dp"
-            android:text="SEWING"
-            android:textSize="30sp"
-            android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
 
+                <!-- Cooking Image -->
+                <ImageButton
+                    android:id="@+id/imgCooking"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_marginBottom="44dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Cooking"
+                    android:src="@drawable/cooking" />
 
+                <!-- Course Title -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="COOKING"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="9dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Fee: R750"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="8dp" />
+                <!-- Fee -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fee: R750"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
 
-        <TextView
-            android:layout_width="309dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:text="Purpose: To prepare and cook nutritious family meals"
-            android:textSize="17sp" />
+                <!-- Purpose -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Purpose: To prepare and cook nutritious family meals"
+                    android:textSize="17sp"
+                    android:layout_marginBottom="8dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Content:"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="4dp" />
+                <!-- Content Label -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Content:"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="4dp" />
 
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:lineSpacingExtra="5dp"
-            android:text="-  Nutritional requirements for a healthy body \n- Types of protein, carbohydrates and vegetables \n- Planning meals  \n- Tasty and nutritious recipes \n-Preparation and cooking of meals"
-            android:textSize="17sp" />
+                <!-- Course Topics -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="5dp"
+                    android:text="- Nutritional requirements for a healthy body\n- Types of protein, carbohydrates and vegetables\n- Planning meals\n- Tasty and nutritious recipes\n- Preparation and cooking of meals"
+                    android:textSize="17sp" />
+            </LinearLayout>
+        </ScrollView>
     </LinearLayout>
 
+    <!-- Navigation Drawer -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:menu="@menu/nav_menu"
+        app:headerLayout="@layout/nav_header" />
 
-</ScrollView>
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,103 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".GardenMaintenanceActivity">
+
+    <!-- Main Content Area -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="16dp"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <!-- Linear layout for the two Image button -->
+        <!-- Toolbar -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#003366"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:title="Garden Maintenance"
+            app:titleTextColor="@android:color/white" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
-        <ImageButton
-            android:id="@id/btnBack"
-            android:layout_width="74dp"
-            android:layout_height="56dp"
-            android:contentDescription="Back to "
-            android:backgroundTint="@color/white"
-            android:src="@drawable/arrow_back_ios_new"
+        <!-- Scrollable Course Content -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp">
 
-            />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
 
-        <ImageButton
-            android:id="@+id/homeButton"
-            android:layout_width="74dp"
-            android:layout_height="56dp"
-            android:layout_marginLeft="215dp"
-            android:contentDescription="Back to home Button "
-            android:src="@drawable/baseline_home_24"
-            android:backgroundTint="@color/white"
+                <!-- Course Image -->
+                <ImageButton
+                    android:id="@+id/imgGardemain"
+                    android:layout_width="match_parent"
+                    android:layout_height="309dp"
+                    android:layout_marginBottom="44dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Garden Maintenance"
+                    android:src="@drawable/gardenmain" />
 
+                <!-- Course Title -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Course: Garden Maintenance"
+                    android:textSize="29sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="9dp" />
 
-            />
+                <!-- Fee -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fee: R750"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Purpose -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Purpose: To provide basic knowledge of watering, pruning and planting in a domestic garden"
+                    android:textSize="17sp"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Content Label -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Content:"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="4dp" />
+
+                <!-- Course Topics -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="6dp"
+                    android:text="- Watering restrictions and the watering requirements of indigenous and exotic plants\n- Pruning and propagation of plants\n- Planting techniques for different plant types"
+                    android:textSize="17sp" />
+            </LinearLayout>
+        </ScrollView>
     </LinearLayout>
 
+    <!-- Navigation Drawer -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:menu="@menu/nav_menu"
+        app:headerLayout="@layout/nav_header" />
 
-        <ImageButton
-            android:id="@+id/imgGardemain"
-            android:layout_width="401dp"
-            android:layout_height="309dp"
-            android:layout_gravity="start"
-            android:layout_marginBottom="44dp"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:contentDescription="Garden Maintenance"
-            android:src="@drawable/gardenmain" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="57dp"
-            android:layout_marginBottom="9dp"
-            android:text="Course:Garden Maintenance"
-            android:textSize="29sp"
-            android:textStyle="bold" />
-
-
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Fee: R750"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="8dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Purpose: To provide basic knowledge of watering, pruning and planting in a domestic garden"
-            android:textSize="17sp"
-            android:layout_marginBottom="8dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Content:"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="4dp" />
-
-
-        <TextView
-            android:layout_width="398dp"
-            android:layout_height="107dp"
-            android:lineSpacingExtra="6dp"
-            android:text="- Watering restrictions and the watering requirements of indigenous  and exotic plants\n-  Pruning and  propagation of plants\n-  Planting techniques for different plant types"
-            android:textSize="17sp" />
-
-
-    </LinearLayout>
-
-
-
-</ScrollView>
+</androidx.drawerlayout.widget.DrawerLayout>
