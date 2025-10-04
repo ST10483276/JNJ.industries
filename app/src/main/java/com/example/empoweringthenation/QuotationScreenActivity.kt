@@ -110,7 +110,7 @@ class QuotationScreenActivity : AppCompatActivity(), NavigationView.OnNavigation
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.nav_home -> startActivity(Intent(this, HomeActivity::class.java))
-            R.id.nav_six_month, R.id.nav_six_week -> startActivity(Intent(this, CourseDetailActivity::class.java))
+            R.id.nav_six_week -> startActivity(Intent(this, CourseDetailActivity::class.java))
             R.id.nav_course_selection -> startActivity(Intent(this, CourseSelectionActivity2::class.java))
             R.id.nav_contact -> startActivity(Intent(this, ContactUsActivity::class.java))
         }

@@ -47,7 +47,7 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_home -> {
                 // Already on home
             }
-            R.id.nav_six_month,
+
             R.id.nav_six_week -> {
                 startActivity(Intent(this, CourseDetailActivity::class.java))
             }

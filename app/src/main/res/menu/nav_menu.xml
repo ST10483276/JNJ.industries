@@ -5,18 +5,15 @@
             android:id="@+id/nav_home"
             android:icon="@drawable/baseline_home_24"
             android:title="Home" />
-        <item
-            android:id="@+id/nav_six_month"
-            android:icon="@drawable/ic_menu_course"
-            android:title="Six-Month Courses" />
+
         <item
             android:id="@+id/nav_six_week"
             android:icon="@drawable/ic_menu_course"
-            android:title="Six-Week Courses" />
+            android:title="Courese Details" />
         <item
             android:id="@+id/nav_course_selection"
             android:icon="@drawable/ic_menu_select"
-            android:title="Course Selection" />
+            android:title="Cours Selection" />
         <item
             android:id="@+id/nav_contact"
             android:icon="@drawable/ic_menu_contact"

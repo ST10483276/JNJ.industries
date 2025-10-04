@@ -95,7 +95,7 @@ class CourseSelectionActivity2 : AppCompatActivity(), NavigationView.OnNavigatio
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.nav_home -> startActivity(Intent(this, HomeActivity::class.java))
-            R.id.nav_six_month, R.id.nav_six_week -> startActivity(Intent(this, CourseDetailActivity::class.java))
+           R.id.nav_six_week -> startActivity(Intent(this, CourseDetailActivity::class.java))
             R.id.nav_contact -> startActivity(Intent(this, ContactUsActivity::class.java))
         }
         drawerLayout.closeDrawer(GravityCompat.START)

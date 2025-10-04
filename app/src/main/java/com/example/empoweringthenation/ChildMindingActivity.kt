@@ -45,7 +45,7 @@ class ChildMindingActivity : AppCompatActivity(), NavigationView.OnNavigationIte
             R.id.nav_home -> {
                 startActivity(Intent(this, HomeActivity::class.java))
             }
-            R.id.nav_six_month, R.id.nav_six_week -> {
+             R.id.nav_six_week -> {
                 startActivity(Intent(this, CourseDetailActivity::class.java))
             }
             R.id.nav_course_selection -> {
