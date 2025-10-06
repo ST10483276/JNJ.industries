@@ -33,9 +33,11 @@ class LandscapingActivity : AppCompatActivity(), NavigationView.OnNavigationItem
             this, drawerLayout, toolbar,
             R.string.navigation_drawer_open,
             R.string.navigation_drawer_close
+
         )
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
+
     }
 
     // Handle navigation drawer item clicks
@@ -45,7 +47,11 @@ class LandscapingActivity : AppCompatActivity(), NavigationView.OnNavigationItem
             R.id.nav_six_week -> startActivity(Intent(this, CourseDetailActivity::class.java))
             R.id.nav_course_selection -> startActivity(Intent(this, CourseSelectionActivity2::class.java))
             R.id.nav_contact -> startActivity(Intent(this, ContactUsActivity::class.java))
+            R.id.nav_find_us-> {
+                startActivity(Intent(this, MapsActivity::class.java))
+            }
         }
+
         drawerLayout.closeDrawer(GravityCompat.START)
         return true
     }

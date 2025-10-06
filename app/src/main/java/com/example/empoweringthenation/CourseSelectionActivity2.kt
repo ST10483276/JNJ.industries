@@ -97,6 +97,9 @@ class CourseSelectionActivity2 : AppCompatActivity(), NavigationView.OnNavigatio
             R.id.nav_home -> startActivity(Intent(this, HomeActivity::class.java))
            R.id.nav_six_week -> startActivity(Intent(this, CourseDetailActivity::class.java))
             R.id.nav_contact -> startActivity(Intent(this, ContactUsActivity::class.java))
+            R.id.nav_find_us-> {
+                startActivity(Intent(this, MapsActivity::class.java))
+            }
         }
         drawerLayout.closeDrawer(GravityCompat.START)
         return true

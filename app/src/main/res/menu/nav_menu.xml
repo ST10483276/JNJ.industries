@@ -9,7 +9,7 @@
         <item
             android:id="@+id/nav_six_week"
             android:icon="@drawable/ic_menu_course"
-            android:title="Courese Details" />
+            android:title="Course Details" />
         <item
             android:id="@+id/nav_course_selection"
             android:icon="@drawable/ic_menu_select"

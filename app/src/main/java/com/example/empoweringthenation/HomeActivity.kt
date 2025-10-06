@@ -57,6 +57,9 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_contact -> {
                 startActivity(Intent(this, ContactUsActivity::class.java))
             }
+            R.id.nav_find_us-> {
+                startActivity(Intent(this, MapsActivity::class.java))
+            }
 
             // plan to implement a Locations link in the navigation
 //            R.id.nav_find_us -> {

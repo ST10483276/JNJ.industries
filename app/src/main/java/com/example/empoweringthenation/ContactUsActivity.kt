@@ -72,6 +72,9 @@ class ContactUsActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
             R.id.nav_contact -> {
                 startActivity(Intent(this, ContactUsActivity::class.java))
             }
+            R.id.nav_find_us-> {
+                startActivity(Intent(this, MapsActivity::class.java))
+            }
         }
 
         drawerLayout.closeDrawer(GravityCompat.START)
