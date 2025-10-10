@@ -52,6 +52,9 @@ class QuotationScreenActivity : AppCompatActivity(), NavigationView.OnNavigation
         val edtEmail = findViewById<EditText>(R.id.edtEmail)
         val btnConfirm = findViewById<Button>(R.id.btnConfirm)
 
+        
+
+
         // Build selected course list
         val courseListBuilder = StringBuilder("Courses Selected:\n\n")
         for (course in selectedCourses) {

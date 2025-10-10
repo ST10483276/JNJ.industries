@@ -14,92 +14,57 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <!-- Toolbar -->
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
+        <!-- Life Skills Image -->
+        <ImageButton
+            android:id="@+id/imgLifeSkills"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="#003366"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            app:title="Life Skills Course"
-            app:titleTextColor="@android:color/white" />
+            android:layout_height="291dp"
+            android:layout_marginBottom="44dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Life Skills"
+            android:src="@drawable/lifeskills" />
 
-        <!-- Scrollable Course Content -->
-        <ScrollView
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="9dp"
+            android:text="Life Skills"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <!-- Fee -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Fee: R1500"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- Purpose -->
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="16dp">
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Purpose: To provide skills to navigate basic life necessities"
+            android:textSize="17sp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="16dp">
+        <!-- Content Label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Content:"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
 
-                <!-- Life Skills Image -->
-                <ImageButton
-                    android:id="@+id/imgLifeSkills"
-                    android:layout_width="match_parent"
-                    android:layout_height="291dp"
-                    android:layout_marginBottom="44dp"
-                    android:background="?attr/selectableItemBackgroundBorderless"
-                    android:contentDescription="Life Skills"
-                    android:src="@drawable/lifeskills" />
-
-                <!-- Course Title -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Life Skills"
-                    android:textSize="30sp"
-                    android:textStyle="bold"
-                    android:layout_marginBottom="9dp" />
-
-                <!-- Fee -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Fee: R1500"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:layout_marginBottom="8dp" />
-
-                <!-- Purpose -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Purpose: To provide skills to navigate basic life necessities"
-                    android:textSize="17sp"
-                    android:layout_marginBottom="8dp" />
-
-                <!-- Content Label -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Content:"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:layout_marginBottom="4dp" />
-
-                <!-- Course Topics -->
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:lineSpacingExtra="5dp"
-                    android:text="- Opening a bank account\n- Basic labour law (know your rights)\n- Basic reading and writing literacy\n- Basic numeric literacy"
-                    android:textSize="17sp" />
-            </LinearLayout>
-        </ScrollView>
+        <!-- Content Details -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="5dp"
+            android:text="• Opening a bank account\n• Basic labour law (know your rights)\n• Basic reading and writing literacy\n• Basic numeric literacy"
+            android:textSize="17sp" />
     </LinearLayout>
-
-    <!-- Navigation Drawer -->
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/nav_view"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:fitsSystemWindows="true"
-        app:menu="@menu/nav_menu"
-        app:headerLayout="@layout/nav_header" />
-
-</androidx.drawerlayout.widget.DrawerLayout>
+</ScrollView>

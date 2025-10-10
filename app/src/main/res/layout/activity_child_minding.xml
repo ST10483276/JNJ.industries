@@ -18,14 +18,72 @@
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="#003366"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            app:title="Child Minding Course"
-            app:titleTextColor="@android:color/white" />
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
 
-        <!-- Scrollable Course Content -->
-        <ScrollView
+
+            <ImageButton
+                android:id="@+id/homeButton"
+                android:layout_width="74dp"
+                android:layout_height="56dp"
+                android:layout_marginLeft="215dp"
+                android:contentDescription="Back to home Button "
+                android:src="@drawable/baseline_home_24"
+                android:backgroundTint="@color/white"
+
+
+                />
+        </LinearLayout>
+
+
+        <ImageButton
+            android:id="@+id/imgChildMining"
+            android:layout_width="318dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="44dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Child minding "
+            android:src="@drawable/childminding" />
+
+        <TextView
+            android:layout_width="341dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="9dp"
+            android:text="Course: Child Minding"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fee: R750"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Purpose: To provide basic child and baby care"
+            android:textSize="17sp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Content:"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="16dp">
