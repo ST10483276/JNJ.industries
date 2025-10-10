@@ -6,6 +6,7 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     tools:context=".HomeActivity">
 
     <!-- Main Content -->
@@ -16,7 +17,7 @@
         android:layout_marginBottom="4dp"
         android:orientation="vertical">
 
-        <!-- Optional Toolbar -->
+        <!-- Toolbar -->
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
@@ -26,37 +27,53 @@
             app:title="Home"
             app:titleTextColor="@android:color/white" />
 
-        <!-- Your original Home content -->
+        <!-- Home Content -->
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+
             <ImageView
-                android:id="@+id/logoImg"
-                android:layout_width="430dp"
-                android:layout_height="343dp"
-                android:background="@drawable/logoimage"
+                android:id="@+id/introImg"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/intro"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintVertical_bias="1.0" />
 
-            <TextView
-                android:id="@+id/descriptionTxt"
-                android:layout_width="358dp"
-                android:layout_height="190dp"
-                android:background="@color/gray"
-                android:text="Empowering the Nation is a community-based app that helps you access practical, life-changing training in first aid, sewing, cooking, life skills, and more. Explore our courses, calculate your training fees, and find a venue near you — all in one place."
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="parent"
+            <ImageView
+                android:id="@+id/logoImg"
+                android:layout_width="430dp"
+                android:layout_height="343dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/logoimage"
+                app:layout_constraintBottom_toTopOf="@+id/startBtn"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.49"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.721" />
+                app:layout_constraintVertical_bias="0.078" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="302dp"
+                android:layout_height="wrap_content"
+                android:text="Empowering Skills. Building Futures."
+                android:textAlignment="center"
+                android:textColor="#003366"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:background="#80FFFFFF"
+                android:padding="8dp"
+                app:layout_constraintTop_toBottomOf="@id/logoImg"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp" />
+
 
             <Button
                 android:id="@+id/startBtn"
@@ -70,26 +87,26 @@
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.443"
+                app:layout_constraintHorizontal_bias="0.503"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.943" />
+                app:layout_constraintVertical_bias="0.932" />
 
             <TextView
-                android:id="@+id/textView"
-                android:layout_width="302dp"
-                android:layout_height="29dp"
-                android:text="Empowering Skills. Building Futures."
-                android:textAlignment="center"
-                android:textColor="#003366"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:id="@+id/descriptionTxt"
+                android:layout_width="360dp"
+                android:layout_height="247dp"
+                android:layout_marginTop="24dp"
+                android:background="#E0E0E0"
+                android:padding="16dp"
+                android:text="Empowering the Nation is a community-based app that helps you access practical, life-changing training in first aid, sewing, cooking, life skills, and more. Explore our courses, calculate your training fees, and find a venue near you — all in one place."
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/introImg"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.504"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.474" />
+                app:layout_constraintTop_toBottomOf="@id/textView"
+                app:layout_constraintVertical_bias="0.0" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 
@@ -102,5 +119,4 @@
         android:fitsSystemWindows="true"
         app:menu="@menu/nav_menu"
         app:headerLayout="@layout/nav_header" />
-
 </androidx.drawerlayout.widget.DrawerLayout>

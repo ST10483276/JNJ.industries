@@ -6,6 +6,7 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     tools:context=".SewingActivity">
 
     <!-- Main Content Area -->
@@ -27,7 +28,8 @@
         <!-- Scrollable Course Content -->
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
             android:padding="16dp">
 
             <LinearLayout
@@ -40,56 +42,115 @@
                 <ImageView
                     android:id="@+id/imgSewing"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
+                    android:layout_height="200dp"
                     android:adjustViewBounds="true"
                     android:scaleType="centerCrop"
                     android:contentDescription="Sewing course image"
                     android:src="@drawable/sewing" />
 
-                <!-- Course Title -->
-                <TextView
-                    android:layout_width="wrap_content"
+                <!-- Highlighted Blue Box for Title, Fee, Purpose, and Content -->
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Sewing"
-                    android:textSize="30sp"
-                    android:textStyle="bold"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="#003366"
+                    android:clipToPadding="false"
+                    android:elevation="2dp"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Course Title -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="8dp"
+                        android:text="Sewing"
+                        android:textColor="#FFFFFF"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <!-- Fee -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="16dp"
+                        android:text="Fee: R1500"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <!-- Purpose -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:text="Purpose: To provide alterations and new garment tailoring services"
+                        android:textColor="#FFFFFF"
+                        android:textSize="17sp" />
+
+                    <!-- Content Label -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:text="Content:"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <!-- Course Topics -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="5dp"
+                        android:text="- Types of stitches\n- Threading a sewing machine\n- Sewing buttons, zips, hems, and seams\n- Alterations\n- Designing and sewing new garments"
+                        android:textColor="#FFFFFF"
+                        android:textSize="17sp" />
+                </LinearLayout>
+
+                <!-- Navigation Arrows -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:layout_marginBottom="8dp" />
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp">
 
-                <!-- Fee -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Fee: R1500"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:layout_marginBottom="8dp" />
+                    <!-- Back Button (Left) -->
+                    <ImageButton
+                        android:id="@+id/btnBack"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/ic_arrow_back"
+                        android:contentDescription="Back" />
 
-                <!-- Purpose -->
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Purpose: To provide alterations and new garment tailoring services"
-                    android:textSize="17sp"
-                    android:layout_marginBottom="8dp" />
+                    <!-- Spacer -->
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="6" />
 
-                <!-- Content Label -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Content:"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:layout_marginBottom="4dp" />
+                    <!-- Forward Button (Right) -->
+                    <ImageButton
+                        android:id="@+id/btnForward"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/ic_arrow_forward"
+                        android:contentDescription="Next Course" />
+                </LinearLayout>
 
-                <!-- Course Topics -->
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:lineSpacingExtra="5dp"
-                    android:text="- Types of stitches\n- Threading a sewing machine\n- Sewing buttons, zips, hems, and seams\n- Alterations\n- Designing and sewing new garments"
-                    android:textSize="17sp" />
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
@@ -101,7 +162,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
-        app:menu="@menu/nav_menu"
-        app:headerLayout="@layout/nav_header" />
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/nav_menu" />
 
 </androidx.drawerlayout.widget.DrawerLayout>

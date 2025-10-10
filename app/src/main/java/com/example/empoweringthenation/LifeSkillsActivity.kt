@@ -3,10 +3,15 @@ package com.example.empoweringthenation
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.ImageButton
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.updatePadding
+
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
 
@@ -27,6 +32,24 @@ class LifeSkillsActivity : AppCompatActivity(), NavigationView.OnNavigationItemS
         drawerLayout = findViewById(R.id.drawer_layout)
         navView = findViewById(R.id.nav_view)
         navView.setNavigationItemSelectedListener(this)
+        // Adjust padding to avoid status bar or camera cutout
+        ViewCompat.setOnApplyWindowInsetsListener(navView) { view, insets ->
+            val systemInsets = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            view.updatePadding(top = systemInsets.top)
+            insets
+        }
+
+        val btnBack = findViewById<ImageButton>(R.id.btnBack)
+        btnBack.setOnClickListener {
+            finish() // go back to previous screen
+        }
+
+        val btnForward = findViewById<ImageButton>(R.id.btnForward)
+        btnForward.setOnClickListener {
+            val intent = Intent(this, SewingActivity::class.java) // or your next course
+            startActivity(intent)
+        }
+
 
         // Enable drawer toggle (hamburger icon)
         val toggle = ActionBarDrawerToggle(

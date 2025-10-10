@@ -3,9 +3,13 @@ package com.example.empoweringthenation
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.updatePadding
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
@@ -30,6 +34,26 @@ class ChildMindingActivity : AppCompatActivity(), NavigationView.OnNavigationIte
         navView = findViewById(R.id.nav_view)
         navView.setNavigationItemSelectedListener(this)
 
+
+        // Adjust padding to avoid status bar or camera cutout
+        ViewCompat.setOnApplyWindowInsetsListener(navView) { view, insets ->
+            val systemInsets = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            view.updatePadding(top = systemInsets.top)
+            insets
+        }
+
+        val btnBack = findViewById<ImageButton>(R.id.btnBack)
+        btnBack.setOnClickListener {
+            finish() // go back to previous screen
+        }
+
+        val btnForward = findViewById<ImageButton>(R.id.btnForward)
+        btnForward.setOnClickListener {
+            val intent = Intent(this, CookingActivity::class.java) // Replace with your next course
+            startActivity(intent)
+        }
+
+
         // Enable drawer toggle (hamburger icon)
         val toggle = ActionBarDrawerToggle(
             this, drawerLayout, toolbar,
@@ -45,16 +69,20 @@ class ChildMindingActivity : AppCompatActivity(), NavigationView.OnNavigationIte
             R.id.nav_home -> {
                 startActivity(Intent(this, HomeActivity::class.java))
             }
-             R.id.nav_six_week -> {
+
+            R.id.nav_six_week -> {
                 startActivity(Intent(this, CourseDetailActivity::class.java))
             }
+
             R.id.nav_course_selection -> {
                 startActivity(Intent(this, CourseSelectionActivity2::class.java))
             }
+
             R.id.nav_contact -> {
                 startActivity(Intent(this, ContactUsActivity::class.java))
             }
-            R.id.nav_find_us-> {
+
+            R.id.nav_find_us -> {
                 startActivity(Intent(this, MapsActivity::class.java))
             }
         }

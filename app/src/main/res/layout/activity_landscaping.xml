@@ -6,6 +6,7 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     tools:context=".LandscapingActivity">
 
     <!-- Main Content Area -->
@@ -27,7 +28,8 @@
         <!-- Scrollable Course Content -->
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
             android:padding="16dp">
 
             <LinearLayout
@@ -39,56 +41,116 @@
                 <!-- Landscaping Image -->
                 <ImageButton
                     android:id="@+id/imgLandscaping"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="290dp"
-                    android:layout_gravity="start"
-                    android:layout_marginBottom="44dp"
+                    android:layout_marginBottom="24dp"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:contentDescription="Landscaping"
-                    android:src="@drawable/landscaping" />
+                    android:src="@drawable/landscaping"
+                    android:scaleType="centerCrop" />
 
-                <!-- Course Title -->
-                <TextView
-                    android:layout_width="wrap_content"
+                <!-- Highlighted Blue Box for Title, Fee, Purpose, and Content -->
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Landscaping"
-                    android:textSize="30sp"
-                    android:textStyle="bold"
-                    android:layout_marginBottom="9dp" />
+                    android:orientation="vertical"
+                    android:background="#003366"
+                    android:padding="16dp"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:elevation="2dp"
+                    android:clipToPadding="false"
+                    android:layout_gravity="center_horizontal">
 
-                <!-- Fee -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Fee: R1500"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:layout_marginBottom="8dp" />
+                    <!-- Course Title -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Landscaping"
+                        android:textSize="26sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="8dp" />
 
-                <!-- Purpose -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Purpose: To provide landscaping services for new and established gardens"
-                    android:textSize="17sp"
-                    android:layout_marginBottom="8dp" />
+                    <!-- Fee -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fee: R1500"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="16dp" />
 
-                <!-- Content Label -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Content:"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:layout_marginBottom="4dp" />
+                    <!-- Purpose -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Purpose: To provide landscaping services for new and established gardens"
+                        android:textSize="17sp"
+                        android:textColor="#FFFFFF"
+                        android:layout_marginBottom="12dp" />
 
-                <!-- Course Topics -->
-                <TextView
-                    android:layout_width="wrap_content"
+                    <!-- Content Label -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Content:"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:layout_marginBottom="4dp" />
+
+                    <!-- Course Topics -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="5dp"
+                        android:text="Indigenous and exotic plants and trees\n- Fixed structures (fountains, statues, benches, tables, built-in braai)\n- Balancing of plants and trees in a garden\n- Aesthetics of plant shapes and colours\n- Garden layout"
+                        android:textSize="17sp"
+                        android:textColor="#FFFFFF" />
+                </LinearLayout>
+
+                <!-- Navigation Arrows -->
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:lineSpacingExtra="5dp"
-                    android:text="Indigenous and exotic plants and trees\n- Fixed structures (fountains, statues, benches, tables, built-in braai)\n- Balancing of plants and trees in a garden\n- Aesthetics of plant shapes and colours\n- Garden layout"
-                    android:textSize="17sp" />
+                    android:orientation="horizontal"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp">
+
+                    <!-- Back Button (Left) -->
+                    <ImageButton
+                        android:id="@+id/btnBack"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/ic_arrow_back"
+                        android:contentDescription="Back" />
+
+                    <!-- Spacer -->
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="6" />
+
+                    <!-- Forward Button (Right) -->
+                    <ImageButton
+                        android:id="@+id/btnForward"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/ic_arrow_forward"
+                        android:contentDescription="Next Course" />
+                </LinearLayout>
+
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
@@ -100,7 +162,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
-        app:menu="@menu/nav_menu"
-        app:headerLayout="@layout/nav_header" />
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/nav_menu" />
 
 </androidx.drawerlayout.widget.DrawerLayout>

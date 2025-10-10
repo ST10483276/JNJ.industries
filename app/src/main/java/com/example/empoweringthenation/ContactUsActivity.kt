@@ -11,6 +11,7 @@ import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.updatePadding
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
 import kotlin.system.exitProcess
@@ -34,6 +35,13 @@ class ContactUsActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
         drawerLayout = findViewById(R.id.drawer_layout)
         navView = findViewById(R.id.nav_view)
         navView.setNavigationItemSelectedListener(this)
+        // Adjust padding to avoid status bar or camera cutout
+        ViewCompat.setOnApplyWindowInsetsListener(navView) { view, insets ->
+            val systemInsets = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            view.updatePadding(top = systemInsets.top)
+            insets
+        }
+
 
         val toggle = ActionBarDrawerToggle(
             this, drawerLayout, toolbar,

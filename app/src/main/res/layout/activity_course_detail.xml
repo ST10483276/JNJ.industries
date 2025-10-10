@@ -6,6 +6,7 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     tools:context=".CourseDetailActivity">
 
     <!-- Main Content -->
@@ -53,9 +54,10 @@
                     android:id="@+id/btnSixMonths"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@color/blue"
                     android:drawableEnd="@drawable/ic_arrow_drop_down"
                     android:drawablePadding="8dp"
+                    android:backgroundTint="@color/black"
+                    android:textColor="@color/white"
                     android:text="SIX-MONTH COURSES" />
 
                 <!-- Six-Month Courses List -->
@@ -71,6 +73,9 @@
                         android:id="@+id/btnFirstAid"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:backgroundTint="@color/grey"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
                         android:drawableEnd="@drawable/ic_arrow_forward"
                         android:text="First Aid" />
 
@@ -78,6 +83,9 @@
                         android:id="@+id/btnSewing"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:backgroundTint="@color/grey"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
                         android:drawableEnd="@drawable/ic_arrow_forward"
                         android:text="Sewing" />
 
@@ -85,6 +93,9 @@
                         android:id="@+id/btnLandscaping"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:backgroundTint="@color/grey"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
                         android:drawableEnd="@drawable/ic_arrow_forward"
                         android:text="Landscaping" />
 
@@ -92,6 +103,9 @@
                         android:id="@+id/btnLifeSkills"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:backgroundTint="@color/grey"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
                         android:drawableEnd="@drawable/ic_arrow_forward"
                         android:text="LifeSkills" />
                 </LinearLayout>
@@ -101,7 +115,7 @@
                     android:id="@+id/btnSixWeeks"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@color/blue"
+                    android:backgroundTint="@color/black"
                     android:drawableEnd="@drawable/ic_arrow_drop_down"
                     android:drawablePadding="8dp"
                     android:text="SIX-WEEK SHORT COURSES" />
@@ -111,6 +125,8 @@
                     android:id="@+id/layoutSixWeeksCourses"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@color/dark_grey"
+                    android:textColor="@color/black"
                     android:orientation="vertical"
                     android:paddingStart="16dp"
                     android:visibility="gone">
@@ -119,6 +135,9 @@
                         android:id="@+id/btnChildMinding"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:backgroundTint="@color/dark_grey"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
                         android:drawableEnd="@drawable/ic_arrow_forward"
                         android:text="Child Minding" />
 
@@ -126,6 +145,9 @@
                         android:id="@+id/btnCooking"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:backgroundTint="@color/dark_grey"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
                         android:drawableEnd="@drawable/ic_arrow_forward"
                         android:text="Cooking" />
 
@@ -133,6 +155,9 @@
                         android:id="@+id/btnGardenMain"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:backgroundTint="@color/dark_grey"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
                         android:drawableEnd="@drawable/ic_arrow_forward"
                         android:text="Garden Maintenance" />
                 </LinearLayout>
@@ -143,7 +168,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="55dp"
-                    android:backgroundTint="@color/black"
+                    android:backgroundTint="@color/blue"
+
                     android:text="Course Selection"
                     android:textSize="22sp" />
             </LinearLayout>

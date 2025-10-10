@@ -3,12 +3,16 @@ package com.example.empoweringthenation
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
+import android.view.View
 import android.widget.*
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.updatePadding
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
 import kotlin.math.roundToInt
@@ -31,6 +35,13 @@ class QuotationScreenActivity : AppCompatActivity(), NavigationView.OnNavigation
         navView = findViewById(R.id.nav_view)
         navView.setNavigationItemSelectedListener(this)
 
+        // Adjust padding to avoid status bar or camera cutout
+        ViewCompat.setOnApplyWindowInsetsListener(navView) { view, insets ->
+            val systemInsets = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            view.updatePadding(top = systemInsets.top)
+            insets
+        }
+
         // Enable drawer toggle (hamburger icon)
         val toggle = ActionBarDrawerToggle(
             this, drawerLayout, toolbar,
@@ -52,12 +63,13 @@ class QuotationScreenActivity : AppCompatActivity(), NavigationView.OnNavigation
         val edtEmail = findViewById<EditText>(R.id.edtEmail)
         val btnConfirm = findViewById<Button>(R.id.btnConfirm)
 
-        // Build selected course list
+        // Build selected course list (line format)
         val courseListBuilder = StringBuilder("Courses Selected:\n\n")
         for (course in selectedCourses) {
             courseListBuilder.append("• $course\n")
         }
         txtSelected.text = courseListBuilder.toString()
+        txtSelected.textAlignment = View.TEXT_ALIGNMENT_CENTER
 
         // Apply discount rules
         val courseCount = selectedCourses.size
@@ -71,16 +83,31 @@ class QuotationScreenActivity : AppCompatActivity(), NavigationView.OnNavigation
         val discountAmount = (totalPrice * discountPercent / 100.0).roundToInt()
         val finalPrice = totalPrice - discountAmount
 
-        // Display quotation breakdown
-        txtBreakdown.text = """
-            QUOTATION
+        // Display quotation breakdown with bold final price
+        val breakdownText = """
+            ──────── QUOTATION ────────
 
-            Number of courses: $courseCount
-            Subtotal: R$totalPrice
-            Discount: $discountPercent% (R$discountAmount)
-            --------------------------------------
-            Final Price: R$finalPrice
+            • Number of courses: $courseCount
+            • Subtotal: R$totalPrice
+            • Discount: $discountPercent% (R$discountAmount)
+
+            ➤ Final Price: R$${finalPrice}
         """.trimIndent()
+
+        val spannable = android.text.SpannableString(breakdownText)
+        val finalLabel = "➤ Final Price: R$${finalPrice}"
+        val startIndex = breakdownText.indexOf(finalLabel)
+        if (startIndex != -1) {
+            spannable.setSpan(
+                android.text.style.StyleSpan(android.graphics.Typeface.BOLD),
+                startIndex,
+                startIndex + finalLabel.length,
+                android.text.Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+            )
+        }
+
+        txtBreakdown.text = spannable
+        txtBreakdown.textAlignment = View.TEXT_ALIGNMENT_CENTER
 
         // Confirm button validates and shows dialog
         btnConfirm.setOnClickListener {
@@ -113,9 +140,7 @@ class QuotationScreenActivity : AppCompatActivity(), NavigationView.OnNavigation
             R.id.nav_six_week -> startActivity(Intent(this, CourseDetailActivity::class.java))
             R.id.nav_course_selection -> startActivity(Intent(this, CourseSelectionActivity2::class.java))
             R.id.nav_contact -> startActivity(Intent(this, ContactUsActivity::class.java))
-            R.id.nav_find_us-> {
-                startActivity(Intent(this, MapsActivity::class.java))
-            }
+            R.id.nav_find_us -> startActivity(Intent(this, MapsActivity::class.java))
         }
         drawerLayout.closeDrawer(GravityCompat.START)
         return true

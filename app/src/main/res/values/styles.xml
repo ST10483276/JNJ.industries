@@ -1,0 +1,6 @@
+<resources>
+    <style name="CustomTextInputStyle" parent="Widget.Material3.TextInputLayout.FilledBox">
+        <item name="boxStrokeColor">#003366</item>
+        <item name="hintTextColor">#666666</item>
+    </style>
+</resources>
