@@ -1,55 +1,379 @@
-/* Navigatgion Bar */
-.navbar{
-  padding: 10px 20px;
-  background-color: #00000000;
-}
-.navbar .nav-list {
-  list-style-type: none;
-  width: 50%;
-  margin: 0;
-  padding: 0;
+nav {
+  position: absolute; 
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: 60px; 
+  padding: 10px 20px; 
+  background-color: transparent; 
   display: flex;
   align-items: center;
+  justify-content: space-between; 
+  transition: 0.45s ease-in-out;
 }
 
-.nav-list li{
-  margin-right: 20px;
+nav ul.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: auto; 
+  display: flex;
+  align-items: center;
+  flex: 1; 
 }
 
-.nav-list li a {
-  display: block;
-  color: rgb(0, 0, 0);
-  text-align: center;
-  font-weight: bolder;
-  padding: 14px 16px;
-  text-decoration: none;
+nav ul.nav-list li {
+  display: inline-block; 
+  margin: 0 10px 0 0; 
+  padding: 0.2em 0.7em; 
 }
 
-li a:hover {
-  background-color: #003366;
+nav ul.nav-list li:last-child {
+  margin-right: 0; /* From navbar */
 }
 
-.nav-list li a:last-child {
-  margin-left: auto;
+nav ul.nav-list li.right {
+  margin-left: auto; 
   margin-right: 0;
 }
 
-.nav-list li img {
+nav a {
+  display: block; 
+  width: auto; 
+  height: auto; 
+  color: white; 
+  text-align: center;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.15em;
+  font-weight: bold; 
+  letter-spacing: 1px;
+  padding: 14px 16px; 
+  transition: 0.25s ease-in-out; 
+}
+
+nav a:hover {
+  color: white; /* white text on navigation */
+  background-color: #003366; /* highlights the link when pressed */
+  border-radius: 4px; /* This adds in a more modern look */
+}
+
+nav ul.nav-list li img {
   width: 28px;
   height: auto;
-  display: block;
+  display: block; 
+}
+
+/* Sliding Background Effect */
+nav::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: rgb(50, 50, 50); 
+  transition: top 0.45s ease-in-out;
+}
+
+/* Activate slide-in by adding 'active' class to nav */
+nav.active::before {
+  top: 0; 
+}
+
+.bg-hidden {
+  top: -100%;
+  opacity: 0;
+}
+
+.bg-visible {
+  top: 0;
+  opacity: 1;
+}
+
+h1 {
+  text-align: center;
+  font-family: a;
+  letter-spacing: 1px;
+}
+
+/* Hero Section */
+.hero{
+  position: relative;
+  width: 100%;
+  height: 80px;
+  background: url("../images/IMG-20250814-WA0005.jpg") no-repeat 50% 50%;
+  background-size: 150%;
+  overflow: hidden;
+}
+.hero h1{
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  width: 100%;
+  padding: 0.3em;
+  font-size: 1.7em;
+  font-weight: bold;
+  font-family: monospace;
+  color: #fff;
+}
+
+.content-wrapper{
+width: 80%;
+height: 265px;
+padding: 1em 10%;
+}
+
+.content-wrapper h1{
+  margin: 0;
+  color: rgb(255, 255, 255);
+}
+
+.content-wrapper p{
+  font-family: "open Sans";
+  text-indent: 1.5em;
+  font-size: large;
 }
 
 /* Body */
 body {
   font-family: Arial, sans-serif;
-  background-color: #ffffff;
+  background-color: white;
+  background-image: url("../Images/Background\ image.jpg") no-repeat 50% 50%;
+  color: black;
+  margin: 0;
+  padding: 0;
+  margin-bottom: -132px;
 }
+
 /* Footer */
-footer{
-  color: #f0f0f0;
+.main-footer {
+  background: linear-gradient(to right, #D9D9D9 50%, #003366 50%);
+  padding: 20px;
+  color: rgb(0, 0, 0);
+  margin-top: 50px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: 99px;
+  margin-right: 50px;
+  position: relative;
+}
+
+.footer-social {
+  display: flex;
+  gap: 16px;
+  margin-left: -100px;
+  margin-right: auto;}
+
+.footer-social a img {
+  width: 40px;
+  height: 40px;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.footer-social a img:hover {
+  opacity: 1;
+  filter: none;
+}
+
+.footer-right {
+  text-align: right;
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.footer-links {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-bottom: 8px;
+  position: absolute;
+  right: 53%;
+  color: black;
+}
+
+.footer-links a {
+  color: black;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.copy-right {
+  font-size: 0.9rem;
+  position: absolute;
+  right: 53%;
+  bottom: -20px;
+  color: black;
+}
+
+/* profile card */
+.flex-container {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: flex-start; 
+  flex-wrap: wrap; 
+  flex-direction: row-reverse;
+  gap: 20px; 
+}
+
+.main-content {
+  flex: 1; 
+  min-width: 300px; 
+}
+
+.profile-card {
   background-color: #003366;
-  padding: 15px;
+  margin-right: 50px;
+  margin-left: auto;
+  line-height: 1.8;
+  color: white;
+  padding: 20px;
+  border-radius: 28px;
   text-align: center;
+  width: 700px;
+  margin-top: 60px;
+  left: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.profile-card h2 {
+  font-size: 1.5em;
+  margin: 0.5em 0;
+}
+
+.profile-card p {
+  font-size: 1em;
+  text-indent: 0;
+  margin: 0 0 1.5em;
+}
+
+.query-card {
+  background-color: #003366;
+  margin-left: 40px;
+  margin-right: auto;
+  margin-top: -620px; /* Drop it down naturally */
+  align-self: flex-start; /* Align it to the top of its column */
+  padding: 20px;
+  line-height: 1.6;
+  color: white;
+  border-radius: 44px;
+  text-align: center;
+  width: 450px;
+  height: 580px;
+  position: relative;
+  left: 0%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.social-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.social-links li a:hover {
+  color: #003366;
+}
+
+.social-card {
+  background-color: white;
+  padding: 16px;
+  border-radius: 8px;
+  margin-top: 20px;
+  width: 90%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.social-card h2 {
+  color: black;
+  margin-bottom: 16px;
+}
+
+.social-media {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(72px, 1fr));
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  justify-items: center;
+}
+
+.social-media li {
+  transition: box-shadow 0.2s;
+  border-radius: 16px;
+}
+
+.social-media li:hover {
+  box-shadow: 0 0 8px #aaa;
+}
+
+.social-media img {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  border-radius: 16px;
+}
+
+/* heading link to stay white*/
+.query-card h1 a {
+  color: white;
+  text-decoration: none;
+}
+
+.query-card h1 a:visited {
   color: white;
 }
+
+.query-card h1 a:hover
+.query-card h1 a:active{
+  color: white;
+  text-decoration: underline;
+}
+
+.social-media img:hover{
+  box-shadow: 0 0 12px #003366;
+}
+
+.query-card h1 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h3 {
+  color:black;
+  font-weight: bolder;
+  font-size: x-large;
+}
+
+.unity-image {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  display: block;
+  margin: 30px auto;
+  border-radius: 30px;
+  margin-right: 15px;
+  margin-bottom: 30px;
+}
+

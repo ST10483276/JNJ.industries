@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- basic setup for character encoding and responsive design -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apply</title>
+
+    <!-- linking external CSS file -->
+    <link rel="stylesheet" href="css/Apply.css" />
+  </head>
+
+  <body>
+    <!-- nav bar for page links -->
+    <nav class="nav-container">
+      <div class="navbar">
+        <ul class="nav-list">
+          <!-- logo section -->
+    <div id="logo">
+      <a href="Home.html">
+        <img src="Images/Empowering the naton Logo (no background).png" alt="Empowering the Nation Logo" style="height: auto; width: 160px"/>
+      </a>
+    </div>
+        <li><a href="Home.html" class="selected">Home</a></li>
+        <li><a href="About Us.html" target="_blank" rel="nonopener">About us</a></li>
+        <li><a href="Courses.html" target="_blank" rel="nonopener">Courses</a></li>
+        <li><a href="Apply.html" target="_blank" rel="nonopener">Apply</a></li>
+        <li><a href="Contact.html" target="_blank" rel="nonopener">Contact us</a></li>
+        <li><a href="signin.html" target="_blank" rel="nonopener">Sign in</a></li>
+
+        </ul>
+      </div>
+    </nav>
+
+    <!-- main heading -->
+    <h1 style="text-align: center">Get started</h1>
+
+    <!-- subheading and instructions -->
+      <h2 style="text-align: center;">Get a Quote</h2>
+      <p style="text-align: center;">To get a quote for the courses you are interested in, please fill out the form below:</p>
+
+    <!-- image for visual appeal -->
+    <div class="main-content">
+        <img src="Images/IMG-20250817-WA0009.jpg"alt="Empowering The Nation" class="quote-image" />
+     </div>
+
+    <!-- form starts here -->
+    <form action="submit_quote.html" method="post" id="quoteForm">
+     <div class="course-options"> 
+      <!-- course selection section -->
+      <h3>Please select your course/s below</h3>
+
+      <!-- six-month options -->
+      <p><b>Six-Month Courses</b></p>
+      <input type="checkbox" id="first-aid" name="courses" value="First Aid" data-fee="1500" />
+      <label for="first-aid"> First Aid R1500</label><br />
+
+      <input type="checkbox" id="sewing" name="courses" value="Sewing" data-fee="1500" />
+      <label for="sewing"> Sewing R1500</label><br />
+
+      <input type="checkbox" id="landscaping" name="courses" value="Landscaping" data-fee="1500" />
+      <label for="landscaping"> Landscaping R1500</label><br />
+
+      <input type="checkbox" id="life-skills" name="courses" value="Life Skills" data-fee="1500" />
+      <label for="life-skills"> Life Skills R1500</label><br /><br />
+
+      <!-- six-week options -->
+      <p><b>Six-Week Courses</b></p>
+      <input type="checkbox" id="child-minding" name="courses" value="Child Minding" data-fee="750" />
+      <label for="child-minding"> Child Minding R750</label><br />
+
+      <input type="checkbox" id="cooking" name="courses" value="Cooking" data-fee="750" />
+      <label for="cooking"> Cooking R750</label><br />
+
+      <input type="checkbox" id="garden-maintenance" name="courses" value="Garden Maintenance" data-fee="750" />
+      <label for="garden-maintenance"> Garden Maintenance R750</label><br /><br />
+
+      <!-- basic user info -->
+      <h3>Please fill in your details</h3>
+
+      <label for="name">Name:</label><br />
+      <input type="text" id="name" name="name" required /><br /><br />
+
+      <label for="Surname">Surname:</label><br />
+      <input type="text" id="Surname" name="Surname" required /><br /><br />
+
+      <label for="email">Email:</label><br />
+      <input type="email" id="email" name="email" required /><br /><br />
+
+      <label for="phone">Phone:</label><br />
+      <input type="tel" id="phone" name="phone" required /><br /><br />
+
+      <!-- buttons to calculate or clear -->
+      <input type="button" value="Calculate Fees" id="calcBtn" />
+      <input type="button" value="Clear" id="clearBtn" />
+
+     </div> 
+    </form>
+
+    <!-- error message area -->
+    <div id="error" style="color:rgb(255, 0, 0); font-weight:600;"></div>
+
+    <div id="quoteModal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h3>Quote Summary</h3>
+        <p id="modalWho" style="color:#003366; font-weight: bold;"></p>
+        
+        <h4>Selected Courses:</h4>
+        <div id="modalPickedList"></div>
+        
+        <div class="quote-details">
+          <p>Subtotal: <span id="modalSubtotal" class="amount">R0.00</span></p>
+          <p>Discount (<span id="modalDiscRate">0</span>%): <span id="modalDiscount" class="amount discount">R0.00</span></p>
+          <p>VAT (15%): <span id="modalVat" class="amount">R0.00</span></p>
+          <p class="total-row"><b>Total: <span id="modalTotal" class="amount total-amount">R0.00</span></b></p>
+        </div>
+        <button id="closeModalBtn" class="modal-button">Close</button>
+      </div>
+    </div>Total: <span id="total">R0.00</span></b></p>
+    </div>
+
+    </section>
+
+    <!-- Footer-->
+ <footer class="main-footer">
+  <div class="footer-container">
+    <div class="footer-social">
+            <a href="https://www.facebook.com/people/Empoweringthenation/61579584212306/" target="_blank">
+                <img src="Images/facbook .png" alt="Instagram" width="24" height="24">
+            </a>
+            <a href="https://www.instagram.com/empoweringthenation_sa/?igsh=anBmYjkzbW84ZXNo#" target="_blank">
+                <img src="Images/pngfind.com-instagram-png-2378905.png" alt="Twitter" width="24" height="24">
+            </a>
+            <a href="https://x.com/empowering_2022" target="_blank">
+                <img src="Images/images (1).png" alt="YouTube" width="24" height="24">
+            </a>
+            <a href="https://www.whatsapp.com/" target="_blank">
+                <img src="Images/Gray whatsapp icon.png" alt="WhatsApp" width="24" height="24">
+            </a>
+            <a href="https://www.linkedin.com" target="_blank"> 
+                <img src="Images/LinkedIn.png" alt="LinkedIn" width="24" height="24">
+            </a>
+    <div class="footer-right">
+          <div class="footer-links">
+            <a href="About Us.html">About Us</a>|
+            <a href="Courses.html">Courses</a> |
+            <a href="Contact.html">Contact</a> |
+            <a href="Privacy.html">Privacy</a> 
+        </div >
+      <p class="copy-right">&copy; 2025 Empowering the Nation</p>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>
+
+<!-- linking external JS file -->
+<script src="js/Apply.js"></script>

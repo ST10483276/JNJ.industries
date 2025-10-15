@@ -17,7 +17,6 @@
   transition: 0.45s ease-in-out;
 }
 
-
 nav ul.nav-list {
   list-style: none;
   margin: 0;
@@ -88,12 +87,20 @@ nav.active::before {
   top: 0; 
 }
 
+/* This is used for the right side for the profile signin/signup */
+.right-side {
+  list-style-type: none;
+  display: inline-block;
+  text-decoration: none;
+  margin-left: auto; 
+}
+
 h1{
-  margin-top: 30px;
-  background-color: #003366;
-  width: 100%;
-  color: white;
-  padding: 20px;
+background-color: #003366;
+width: 100%;
+color: white;
+padding: 20px;
+margin-top: 90px;
 }
 
 /* Body */
@@ -118,12 +125,18 @@ body::before {
   height: 100vh;
 }
 
+/* courses.css */
+.course-options {
+  margin-left: 70px; /* Adjust this value to control how far right it shifts */
+  margin-top: -770px;
+}
+
+
 /* Footer */
 .main-footer {
   background: linear-gradient(to right, #D9D9D9 50%, #003366 50%);
   padding: 20px;
-  color: rgb(0, 0, 0);
-  margin-top: 249px;
+  color: white;
 }
 
 .footer-container {
@@ -168,11 +181,10 @@ body::before {
   margin-bottom: 8px;
   position: absolute;
   right: 53%;
-  color: black;
 }
 
 .footer-links a {
-  color: black;
+  color: white;
   text-decoration: none;
   font-size: 1rem;
 }
@@ -182,39 +194,42 @@ body::before {
   position: absolute;
   right: 53%;
   bottom: -20px;
-  color: black;
 }
 
-form {
-    text-align: center;
-    margin-top: 130px;
-  }
 
-  label {
-    display: inline-block;
-    width: 100px;
-    text-align: right;
-    margin-right: 10px;
-    font-weight: bold;
-  }
+/* image styling*/
+.main-content {
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
 
+}
+ 
+input[type="text"],
+  input[type="password"],
   input[type="text"],
-  input[type="password"] {
+  input[type="email"],
+  input[type="tel"]
+   {
     border: 2px solid #003366; /* Blue outline */
-    padding: 8px;
+    padding: 10px;
     width: 250px;
     box-sizing: border-box;
-    margin-bottom: 15px;
-    margin-right: 100px;
+    margin-left: 10px;
+    margin: 20px auto;
+    display: flexbox;
   }
 
-  button {
+  .calcBtn {
     padding: 10px 20px;
     background-color: #003366;
     color: white;
     border: none;
     cursor: pointer;
-    
   }
 
   button:hover {
@@ -224,3 +239,19 @@ form {
   .form-row {
     margin-bottom: 10px;
   }
+
+  #calcBtn {
+  background-color: #003366;
+  color: white;
+}
+
+#clearBtn {
+  background-color: #003366;
+  color: white;
+}
+
+.quote-image {
+  width: 850px;
+  height: 751px;
+  margin-left: 650px;
+}

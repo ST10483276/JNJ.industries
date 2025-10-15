@@ -1,40 +1,300 @@
-/* Navigatgion Bar */
-ul {
-  list-style-type: none;
-  width: 50%;
+.navbar {
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px; 
+  padding: 10px 20px; 
+  background-image: url('../images/IMG-20250814-WA0005.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  transition: 0.45s ease-in-out;
+}
+
+nav ul.nav-list {
+  list-style: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
-  background-color: #00000000;
+  width: auto; 
+  display: flex;
+  align-items: center;
+  flex: 1; 
 }
-li {
-  float: left;
+
+nav ul.nav-list li {
+  display: inline-block; 
+  margin: 0 10px 0 0; 
+  padding: 0.2em 0.7em; 
 }
-li a {
-  display: block;
-  color: rgb(0, 0, 0);
+
+nav ul.nav-list li:last-child {
+  margin-right: 0; /* From navbar */
+}
+
+nav ul.nav-list li.right {
+  margin-left: auto; 
+  margin-right: 0;
+}
+
+nav a {
+  display: block; 
+  width: auto; 
+  height: auto; 
+  color: white; 
   text-align: center;
-  font-weight: bolder;
-  padding: 14px 16px;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.15em;
+  font-weight: bold; 
+  letter-spacing: 1px;
+  padding: 14px 16px; 
+  transition: 0.25s ease-in-out; 
+}
+
+nav a:hover {
+  color: white; /* white text on navigation */
+  background-color: #003366; /* highlights the link when pressed */
+  border-radius: 4px; /* This adds in a more modern look */
+}
+
+nav ul.nav-list li img {
+  width: 28px;
+  height: auto;
+  display: block; 
+}
+
+/* Sliding Background Effect */
+nav::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: rgb(50, 50, 50); 
+  transition: top 0.45s ease-in-out;
+}
+
+/* Activate slide-in by adding 'active' class to nav */
+nav.active::before {
+  top: 0; 
+}
+
+/* This is used for the right side for the profile signin/signup */
+.right-side {
+  list-style-type: none;
+  display: inline-block;
+  text-decoration: none;
+  margin-left: auto; 
+}
+
+h1{
+margin-top: 30px;
+background-color: #003366;
+width: 100%;
+color: white;
+padding: 20px;
+}
+
+/* Body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: -1;
+  background-image: url('../images/Background image.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(15px); /* Adjust blur as needed */
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Footer */
+.main-footer {
+  background: linear-gradient(to right, #D9D9D9 50%, #003366 50%);
+  padding: 20px;
+  color: rgb(0, 0, 0);
+  width: 100%;
+}
+
+.footer-container {
+  display: block;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: 99px;
+  margin-right: 50px;
+  position: relative;
+}
+
+.footer-social {
+  display: flex;
+  gap: 16px;
+  margin-left: -100px;
+  margin-right: auto;}
+
+.footer-social a img {
+  width: 40px;
+  height: 40px;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.footer-social a img:hover {
+  opacity: 1;
+  filter: none;
+}
+
+.footer-right {
+  text-align: right;
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.footer-links {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-bottom: 8px;
+  position: absolute;
+  right: 53%;
+  color: black;
+}
+
+.footer-links a {
+  color: black;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.copy-right {
+  font-size: 0.9rem;
+  position: absolute;
+  right: 53%;
+  bottom: -20px;
+  color: black;
+}
+
+.course-list {
+  background-color: #003366;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+  margin-left: 100px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: x-large;
+}
+
+.course-list:hover {
+  color: white;
   text-decoration: none;
 }
 
-li a:hover {
-  background-color: #003366;
+.course-list :visited {
+  color: white;
 }
 
+.course-list :hover
+.course-list :active{
+  color: white;
+  text-decoration: none;
+}
 
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  justify-content: center;
+}
 
+.card-container-2 {
+  background-color: #003366;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+  margin-left: 100px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: x-large;
+}
 
-body {
-        font-family: Arial, sans-serif;
-        background-color: #ffffff;
-    }
-/* Footer */
-    footer{
-        color: #f0f0f0;
-        background-color: #003366;
-        padding: 15px;
-        text-align: center;
-        color: white;
-    }
+.card-container-2:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.card-container-2 :visited {
+  color: white;
+}
+
+.card-container-2 :hover
+.card-container-2 :active{
+  color: white;
+  text-decoration: none;
+}
+
+.image-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  border-radius: 28px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.About-US-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 28px;
+  display: block;
+}
+
+.btn {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  padding: 14px 28px;
+  font-size: 1.2rem;
+  background: #003366;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: #737373;
+}

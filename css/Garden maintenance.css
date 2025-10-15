@@ -1,37 +1,284 @@
-/* Navigatgion Bar */
-ul {
-  list-style-type: none;
-  width: 50%;
+.navbar {
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px; 
+  padding: 10px 20px; 
+  background-image: url('../images/IMG-20250814-WA0005.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  transition: 0.45s ease-in-out;
+}
+
+
+nav ul.nav-list {
+  list-style: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
-  background-color: #00000000;
+  width: auto; 
+  display: flex;
+  align-items: center;
+  flex: 1; 
 }
-li {
-  float: left;
+
+nav ul.nav-list li {
+  display: inline-block; 
+  margin: 0 10px 0 0; 
+  padding: 0.2em 0.7em; 
 }
-li a {
-  display: block;
-  color: rgb(0, 0, 0);
+
+nav ul.nav-list li:last-child {
+  margin-right: 0; /* From navbar */
+}
+
+nav ul.nav-list li.right {
+  margin-left: auto; 
+  margin-right: 0;
+}
+
+nav a {
+  display: block; 
+  width: auto; 
+  height: auto; 
+  color: white; 
   text-align: center;
-  font-weight: bolder;
-  padding: 14px 16px;
   text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.15em;
+  font-weight: bold; 
+  letter-spacing: 1px;
+  padding: 14px 16px; 
+  transition: 0.25s ease-in-out; 
 }
 
-li a:hover {
+nav a:hover {
+  color: white; /* white text on navigation */
+  background-color: #003366; /* highlights the link when pressed */
+  border-radius: 4px; /* This adds in a more modern look */
+}
+
+nav ul.nav-list li img {
+  width: 28px;
+  height: auto;
+  display: block; 
+}
+
+/* Sliding Background Effect */
+nav::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: rgb(50, 50, 50); 
+  transition: top 0.45s ease-in-out;
+}
+
+/* Activate slide-in by adding 'active' class to nav */
+nav.active::before {
+  top: 0; 
+}
+
+h1{
+  margin-top: 35px;
   background-color: #003366;
+  color: white;
+  padding: 20px;
+  width: 100%;
+  margin-left: -8px;
 }
 
+/* Body */
 body {
   font-family: Arial, sans-serif;
   background-color: #ffffff;
-    }
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: -1;
+  background-image: url('../images/Background image.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(15px); /* Adjust blur as needed */
+  width: 100vw;
+  height: 100vh;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
 /* Footer */
-footer{
-  color: #f0f0f0;
-  background-color: #003366;
-  padding: 15px;
+.main-footer {
+  background: linear-gradient(to right, #D9D9D9 50%, #003366 50%);
+  padding: 20px;
+  color: rgb(0, 0, 0);
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: 99px;
+  margin-right: 50px;
+  position: relative;
+}
+
+.footer-social {
+  display: flex;
+  gap: 16px;
+  margin-left: -100px;
+  margin-right: auto;}
+
+.footer-social a img {
+  width: 40px;
+  height: 40px;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.footer-social a img:hover {
+  opacity: 1;
+  filter: none;
+}
+
+.footer-right {
+  text-align: right;
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.footer-links {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-bottom: 8px;
+  position: absolute;
+  right: 53%;
+  color: black;
+}
+
+.footer-links a {
+  color: black;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.copy-right {
+  font-size: 0.9rem;
+  position: absolute;
+  right: 53%;
+  bottom: -20px;
+  color: black;
+}
+
+.page-container {
+  padding: 30px;
+  background-color: #fdfdfd;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-section h1 {
   text-align: center;
+  margin-top: -3px;
+  width: 105%;
+  margin-left: -35px;
+}
+
+.image-section {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  gap: 480px;
+  margin: 40px auto;
+  flex-wrap: wrap;
+  width: 100%; 
+}
+
+.image-section img {
+  width: 492px;
+  height: 487px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  aspect-ratio: 492/587;
+}
+
+/* Info Section */
+.info-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.profile-card {
+  background-color: #003366;
   color: white;
-    }
+  border-radius: 12px;
+  padding: 20px;
+  width: 400px;
+  height: 450px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  flex-shrink: 0;
+  margin-top: -530px;
+  margin-bottom: 100px;
+}
+
+.profile-card p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  line-height: 1.6;
+  margin-top: 25px;
+}
+
+.profile-card ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.profile-card li {
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.header-section {
+  background-color: #003366;
+  margin-top: 35.5px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  padding-left: 80px;
+}
+
+.nav-links h1 {
+  margin: 0;
+  font-size: 24px;
+}

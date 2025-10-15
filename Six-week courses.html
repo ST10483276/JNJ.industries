@@ -8,59 +8,87 @@
   </head>
 
   <body>
-    <!-- Navigation bar -->
+   <!-- Navigation bar -->
+    <nav class="nav-container">
     <div class="navbar">
-    <ul class="nav-list">
+     <ul class="nav-list">
+    <div id="logo">
+      <a href="Home.html">
+        <img src="Images/Empowering the naton Logo (no background).png" alt="Empowering the Nation Logo" style="height: auto; width: 160px"/>
+      </a>
+    </div>
         <li><a href="Home.html" class="selected">Home</a></li>
-        <li><a href="About Us.html">About</a></li>
-        <li><a href="Courses.html">Courses</a></li>
-        <li><a href="Booking.html">Booking</a></li>
-        <li><a href="Contact.html">Contact</a></li>
-        <li>
-            <a href="signin.html" target="_blank">
-                <img src="Images/WhatsApp Image 2025-08-17 at 22.12.12_df0d85c0.jpg" alt="WhatsApp Sign In" style="height: 28px;" />
-            </a>
-        </li>
-    </ul>
-</div>
+        <li><a href="About Us.html" target="_blank" rel="nonopener">About us</a></li>
+        <li><a href="Courses.html" target="_blank" rel="nonopener">Courses</a></li>
+        <li><a href="Apply.html" target="_blank" rel="nonopener">Apply</a></li>
+        <li><a href="Contact.html" target="_blank" rel="nonopener">Contact us</a></li>
+        <li><a href="signin.html" target="_blank" rel="nonopener">Sign in</a></li>
+    </nav>    
+    </div>
+
+    <br><br><br>
     <h1 style="text-align: center">Six-week Courses</h1>
 
-    <p>Child Minding</p>
-    <p>Short summary: "Basic child and baby care."</p>
-    <!-- Link to the Child Minding course page -->
-    <a href="Child Minding.html">View Details</a>
-
-    <br />
-    <br />
-
-    <p>Cooking</p>
-    <p>Short summary: " preparing and cooking nutritious family meals."</p>
-    <!-- Link to the cooking course page -->
-    <a href="Cooking.html">View Details</a>
-
-    <br />
+  <div class="card-container">
+   <div class="course-list">
+      <h3>Child Minding</h3>
+      <p>Short summary: "Basic child and baby care."</p>
+      <!-- Link to the Child Minding course page -->
+      <a href="Child Minding.html" style="color: white;"><b>View Details→</b></a>
+      <h3>Cooking</h3>
+      <p>Short summary: " preparing and cooking nutritious family meals."</p>
+      <!-- Link to the cooking course page -->
+      <a href="Cooking.html" style="color: white;"> <b>View Details→</b></a>
+   </div> <br />
     <br />
 
-    <p>Garden Maintenance</p>
+  <div class="card-container-2">
+    <h3>Garden Maintenance</h3>
     <p>
       Short summary: "Basic knowledge of watering, pruning and planting in a
       domestic garden."
     </p>
     <!-- Link to the Garden Maintenance course page -->
-    <a href="Garden maintenance.html">View Details</a>
-
+    <a href="Garden maintenance.html" style="color: white;"><b>View Details→</b></a>
+  </div>
     <br />
-    <br />
 
-    <img src="Images/WhatsApp Image 2025-08-20 at 15.47.08_9dfc30cb.jpg" style="width: auto; height: auto" />
+  <div class="image-section">
+    <div class="image-wrapper">
+      <img src="Images/WhatsApp Image 2025-08-20 at 15.47.08_9dfc30cb.jpg" class="About-US-image" />
+      <a href="Apply.html" class="btn">Proceed</a>
+    </div>
+  </div>
 
-    <!-- Link to proceed to the Course selection -->
-    <a href="Booking.html">Add Course</a>
-
-    <hr />
     <!-- Footer-->
-    <footer>
-      <p>© 2025 Empowering The Nation</p>
-    </footer>
+ <footer class="main-footer">
+  <div class="footer-container">
+    <div class="footer-social">
+            <a href="https://www.facebook.com/people/Empoweringthenation/61579584212306/" target="_blank">
+                <img src="Images/facbook .png" alt="Instagram" width="24" height="24">
+            </a>
+            <a href="https://www.instagram.com/empoweringthenation_sa/?igsh=anBmYjkzbW84ZXNo#" target="_blank">
+                <img src="Images/pngfind.com-instagram-png-2378905.png" alt="Twitter" width="24" height="24">
+            </a>
+            <a href="https://x.com/empowering_2022" target="_blank">
+                <img src="Images/images (1).png" alt="YouTube" width="24" height="24">
+            </a>
+            <a href="https://www.whatsapp.com/" target="_blank">
+                <img src="Images/Gray whatsapp icon.png" alt="WhatsApp" width="24" height="24">
+            </a>
+            <a href="https://www.linkedin.com" target="_blank"> 
+                <img src="Images/LinkedIn.png" alt="LinkedIn" width="24" height="24">
+            </a>
+    <div class="footer-right">
+          <div class="footer-links">
+            <a href="About Us.html">About Us</a>|
+            <a href="Courses.html">Courses</a> |
+            <a href="Contact.html">Contact</a> |
+            <a href="Privacy.html">Privacy</a> 
+        </div >
+      <p class="copy-right">&copy; 2025 Empowering the Nation</p>
+    </div>
+  </div>
+</footer>
   </body>
 </html>
