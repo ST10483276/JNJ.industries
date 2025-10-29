@@ -42,16 +42,22 @@ class ChildMindingActivity : AppCompatActivity(), NavigationView.OnNavigationIte
             insets
         }
 
+        // Back button → LifeSkillsActivity
         val btnBack = findViewById<ImageButton>(R.id.btnBack)
         btnBack.setOnClickListener {
-            finish() // go back to previous screen
+            val intent = Intent(this, LifeSkillsActivity::class.java)
+            startActivity(intent)
+            finish()
         }
 
+        //  Forward button → CookingActivity
         val btnForward = findViewById<ImageButton>(R.id.btnForward)
         btnForward.setOnClickListener {
-            val intent = Intent(this, CookingActivity::class.java) // Replace with your next course
+            val intent = Intent(this, CookingActivity::class.java)
             startActivity(intent)
+            finish()
         }
+
 
 
         // Enable drawer toggle (hamburger icon)

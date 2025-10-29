@@ -38,16 +38,22 @@ class LandscapingActivity : AppCompatActivity(), NavigationView.OnNavigationItem
             view.updatePadding(top = systemInsets.top)
             insets
         }
+        // Back button → SewingActivity
         val btnBack = findViewById<ImageButton>(R.id.btnBack)
         btnBack.setOnClickListener {
-            finish() // go back to previous screen
+            val intent = Intent(this, SewingActivity::class.java)
+            startActivity(intent)
+            finish() // optional: keeps the back stack clean
         }
 
+        // Forward button → LifeSkillsActivity
         val btnForward = findViewById<ImageButton>(R.id.btnForward)
         btnForward.setOnClickListener {
             val intent = Intent(this, LifeSkillsActivity::class.java)
             startActivity(intent)
+            finish()
         }
+
 
 
         // Enable drawer toggle (hamburger icon)

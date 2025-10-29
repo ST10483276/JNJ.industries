@@ -1,7 +1,28 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+
+    <!-- Base application theme using Material3 -->
     <style name="Base.Theme.EmpoweringTheNation" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <!-- Primary branding color -->
+        <item name="colorPrimary">#003366</item>
+        <item name="colorSecondary">#002244</item> <!-- Optional replacement -->
+
+        <!-- Focus color for EditText, switches, etc. -->
+        <item name="colorControlActivated">#003366</item>
+
+        <!-- Optional: Customize status bar and navigation bar -->
+        <item name="android:statusBarColor">#002244</item>
+        <item name="android:navigationBarColor">#003366</item>
+
+        <!-- Optional: Text appearance -->
+        <item name="android:textColorPrimary">#000000</item>
+        <item name="android:textColorSecondary">#666666</item>
+
+        <!-- Optional: Surface and contrast colors -->
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorSurface">#F5F5F5</item>
     </style>
+
+    <!-- App theme that extends the base -->
+    <style name="Theme.EmpoweringTheNation" parent="Base.Theme.EmpoweringTheNation" />
+
 </resources>

@@ -41,13 +41,18 @@ class SewingActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
 
         val btnBack = findViewById<ImageButton>(R.id.btnBack)
         btnBack.setOnClickListener {
-            finish() // go back to previous screen
+            // Explicitly go back to First Aid
+            val intent = Intent(this, FirstAidActivity::class.java)
+            startActivity(intent)
+            finish() // optional: prevents stacking
         }
 
         val btnForward = findViewById<ImageButton>(R.id.btnForward)
         btnForward.setOnClickListener {
-            val intent = Intent(this, CourseSelectionActivity2::class.java)
+            // Explicitly go forward to Landscaping
+            val intent = Intent(this, LandscapingActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
 

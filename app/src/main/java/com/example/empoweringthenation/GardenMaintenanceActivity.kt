@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.ImageButton
+import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -15,7 +16,8 @@ import androidx.core.view.updatePadding
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
 
-class GardenMaintenanceActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+class GardenMaintenanceActivity : AppCompatActivity(),
+    NavigationView.OnNavigationItemSelectedListener {
 
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var navView: NavigationView
@@ -41,16 +43,19 @@ class GardenMaintenanceActivity : AppCompatActivity(), NavigationView.OnNavigati
 
         val btnBack = findViewById<ImageButton>(R.id.btnBack)
         btnBack.setOnClickListener {
-            finish() // go back to previous screen
+            val intent = Intent(this, CookingActivity::class.java)
+            startActivity(intent)
+            finish()
         }
 
         val btnForward = findViewById<ImageButton>(R.id.btnForward)
         btnForward.setOnClickListener {
-            val intent = Intent(this, SewingActivity::class.java)
+            Toast.makeText(this, "We’re now taking you to select your course.", Toast.LENGTH_SHORT)
+                .show()
+            val intent = Intent(this, CourseSelectionActivity2::class.java)
             startActivity(intent)
+            finish()
         }
-
-
 
 
         // Enable drawer toggle (hamburger icon)
@@ -67,10 +72,16 @@ class GardenMaintenanceActivity : AppCompatActivity(), NavigationView.OnNavigati
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.nav_home -> startActivity(Intent(this, HomeActivity::class.java))
-          R.id.nav_six_week -> startActivity(Intent(this, CourseDetailActivity::class.java))
-            R.id.nav_course_selection -> startActivity(Intent(this, CourseSelectionActivity2::class.java))
+            R.id.nav_six_week -> startActivity(Intent(this, CourseDetailActivity::class.java))
+            R.id.nav_course_selection -> startActivity(
+                Intent(
+                    this,
+                    CourseSelectionActivity2::class.java
+                )
+            )
+
             R.id.nav_contact -> startActivity(Intent(this, ContactUsActivity::class.java))
-            R.id.nav_find_us-> {
+            R.id.nav_find_us -> {
                 startActivity(Intent(this, MapsActivity::class.java))
             }
         }

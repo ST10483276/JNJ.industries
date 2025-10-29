@@ -56,7 +56,7 @@
                     android:layout_height="wrap_content"
                     android:drawableEnd="@drawable/ic_arrow_drop_down"
                     android:drawablePadding="8dp"
-                    android:backgroundTint="@color/black"
+                    android:backgroundTint="@color/blue"
                     android:textColor="@color/white"
                     android:text="SIX-MONTH COURSES" />
 
@@ -115,7 +115,7 @@
                     android:id="@+id/btnSixWeeks"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@color/black"
+                    android:backgroundTint="@color/blue"
                     android:drawableEnd="@drawable/ic_arrow_drop_down"
                     android:drawablePadding="8dp"
                     android:text="SIX-WEEK SHORT COURSES" />
@@ -126,7 +126,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/dark_grey"
-                    android:textColor="@color/black"
+                    android:textColor="@color/grey"
                     android:orientation="vertical"
                     android:paddingStart="16dp"
                     android:visibility="gone">
@@ -183,7 +183,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
-        app:menu="@menu/nav_menu"
-        app:headerLayout="@layout/nav_header" />
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/nav_menu" />
 
 </androidx.drawerlayout.widget.DrawerLayout>

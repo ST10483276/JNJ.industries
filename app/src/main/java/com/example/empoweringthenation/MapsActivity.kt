@@ -1,12 +1,16 @@
 package com.example.empoweringthenation
 
+import android.Manifest
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import androidx.core.view.GravityCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -20,11 +24,16 @@ import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.google.android.material.navigation.NavigationView
 
-class MapsActivity : AppCompatActivity(), OnMapReadyCallback, NavigationView.OnNavigationItemSelectedListener {
+class MapsActivity : AppCompatActivity(), OnMapReadyCallback,
+    NavigationView.OnNavigationItemSelectedListener {
 
     private lateinit var gMap: GoogleMap
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var navView: NavigationView
+
+    companion object {
+        private const val LOCATION_PERMISSION_REQUEST_CODE = 1
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -58,6 +67,17 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, NavigationView.OnN
         val mapFragment = supportFragmentManager
             .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
+
+        // Request location permission if not granted
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
+            != PackageManager.PERMISSION_GRANTED
+        ) {
+            ActivityCompat.requestPermissions(
+                this,
+                arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),
+                LOCATION_PERMISSION_REQUEST_CODE
+            )
+        }
     }
 
     override fun onMapReady(googleMap: GoogleMap) {
@@ -68,14 +88,28 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, NavigationView.OnN
         gMap.moveCamera(CameraUpdateFactory.newLatLngZoom(location, 14f))
 
         gMap.uiSettings.isZoomControlsEnabled = true
-        Toast.makeText(this, "our main branch is here!", Toast.LENGTH_SHORT).show()
+
+        // Enable location if permission granted
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
+            == PackageManager.PERMISSION_GRANTED
+        ) {
+            gMap.isMyLocationEnabled = true
+        }
+
+        Toast.makeText(this, "Our main branch is here!", Toast.LENGTH_SHORT).show()
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.nav_home -> startActivity(Intent(this, HomeActivity::class.java))
             R.id.nav_six_week -> startActivity(Intent(this, CourseDetailActivity::class.java))
-            R.id.nav_course_selection -> startActivity(Intent(this, CourseSelectionActivity2::class.java))
+            R.id.nav_course_selection -> startActivity(
+                Intent(
+                    this,
+                    CourseSelectionActivity2::class.java
+                )
+            )
+
             R.id.nav_contact -> startActivity(Intent(this, ContactUsActivity::class.java))
             R.id.nav_find_us -> startActivity(Intent(this, MapsActivity::class.java))
         }

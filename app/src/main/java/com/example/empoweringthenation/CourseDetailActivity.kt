@@ -138,7 +138,7 @@ class CourseDetailActivity : AppCompatActivity() , NavigationView.OnNavigationIt
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.nav_home -> {
-                // Already on home
+
             }
 
             R.id.nav_six_week -> {
