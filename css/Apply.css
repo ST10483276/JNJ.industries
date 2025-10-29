@@ -334,8 +334,8 @@ input[type="text"],
 }
 
 .discount {
-  color: #c00;
-  font-weight: normal;
+  color: #FA5252;
+  font-weight: 400;
 }
 
 .total-amount {
