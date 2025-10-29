@@ -1,6 +1,6 @@
 // A simple function to be executed when the form is submitted.
 function handleSignup(event) {
-    // Prevent the default form submission (which is navigating to signin.html)
+    // Prevent the default form submission (which is navigating to the form's action, signin.html)
     // for a moment so we can show the alert.
     event.preventDefault(); 
 
@@ -9,17 +9,15 @@ function handleSignup(event) {
     const form = event.target;
     if (form.checkValidity()) {
         // Show the success pop-up message
-        alert("Account successfully created! Redirecting to the sign-in page.");
+        alert("Account successfully created Welcome to Empowering The Nation! Redirecting to the contact page.");
 
         // After the user clicks 'OK' on the alert, 
-        // manually submit the form to proceed to the 'action' URL.
+        // manually redirect the user to Contact.html.
         // We use a slight delay just in case.
         setTimeout(() => {
-            // Note: We need to use a non-default method to submit 
-            // after the alert, or change the action to an actual server endpoint.
-            // For this simple client-side example, we'll just redirect manually 
-            // to mimic the form's action, as calling form.submit() might loop with the event listener.
-            window.location.href = form.action;
+            // Instead of using form.action (which is "signin.html"), 
+            // we redirect directly to "Contact.html"
+            window.location.href = "Contact.html"; 
         }, 100);
     } else {
         // If the form is somehow invalid despite 'required' attributes, let the browser handle it.
@@ -30,7 +28,9 @@ function handleSignup(event) {
 // Wait for the entire HTML document to be loaded
 document.addEventListener('DOMContentLoaded', () => {
     // Get the sign-up form element
-    const signupForm = document.querySelector('form[action="signin.html"]');
+    // Note: The selector 'form[action="signin.html"]' is kept, 
+    // but the destination is overridden in handleSignup.
+    const signupForm = document.querySelector('form[action="signin.html"]'); 
     
     // Check if the form was found
     if (signupForm) {

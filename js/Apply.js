@@ -31,6 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // Modal elements
   const modal = document.getElementById("quoteModal");
   const closeModalBtn = document.querySelector(".close-btn");
+  // RENAMED: Use a more descriptive name for the main action button
+  const proceedBtn = document.getElementById("closeModalBtn"); 
   const who = document.getElementById("modalWho"); // New ID for modal
   const listBox = document.getElementById("modalPickedList"); // New ID for modal
   const subtotalEl = document.getElementById("modalSubtotal");
@@ -47,10 +49,17 @@ document.addEventListener("DOMContentLoaded", () => {
     modal.style.display = "block";
   };
 
-  // Function to hide the modal
+  // Function to hide the modal (Still needed for the 'x' and clicking outside)
   const hideModal = () => {
     modal.style.display = "none";
   };
+
+  // NEW FUNCTION: Handles the "Proceed" button click
+  const proceedToSignup = () => {
+      // Redirects the user to the signup page
+      window.location.href = 'signup.html';
+  };
+
 
   // Close the modal when the close button (x) is clicked
   closeModalBtn.addEventListener("click", hideModal);
@@ -61,6 +70,9 @@ document.addEventListener("DOMContentLoaded", () => {
       hideModal();
     }
   });
+
+  // ATTACH NEW FUNCTION: When the main modal button is clicked, redirect instead of hiding.
+  proceedBtn.addEventListener("click", proceedToSignup);
 
   // --- Core Functionality ---
 

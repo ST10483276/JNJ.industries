@@ -88,14 +88,6 @@ nav.active::before {
   top: 0; 
 }
 
-/* This is used for the right side for the profile signin/signup */
-.right-side {
-  list-style-type: none;
-  display: inline-block;
-  text-decoration: none;
-  margin-left: auto; 
-}
-
 h1 {
 margin-top: 30px;
 background-color: #003366;
@@ -107,10 +99,14 @@ padding: 20px;
 /* Body */
 body {
   font-family: Arial, sans-serif;
-  color: #292929;
+  color: #ffffff;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+}
+
+p {
+  font-weight: 700;
 }
 
 body::before {
@@ -222,6 +218,14 @@ body::before {
   color: black;
 }
 
+.profile-card {
+  color: rgb(255, 255, 255);
+  background-color: #003366;
+  border-radius: 12px;
+  margin-top: 42px;
+  margin-left: 30px;
+  width: 650px;
+}
 
 @media (max-width: 768px) {
   .content-wrapper-left,
