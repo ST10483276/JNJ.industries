@@ -16,7 +16,14 @@
 
 **Empowering the Nation** is a digital solution designed to support **domestic workers and gardeners** by offering accessible skills training programmes through both a **website** and a **mobile application**.  
 
-The purpose of this project is to bridge the gap between traditional learning and digital accessibility by providing users with **courses**, **contact options**, and **quotation requests**, empowering individuals to upskill themselves and gain better employment opportunities.  
+The purpose of this project is to bridge the gap between traditional learning and digital accessibility by providing users with **courses**, **contact options**, and **quotation requests**, empowering individuals to upskill themselves and gain better employment opportunities.
+
+## Repository Structure  
+
+- The **main branch** contains the **Android app project**.  
+- The **Website branch** contains all the **website files**.  
+- The **jenni-section** and **nhlanhla-section** branches were used for **app development and collaboration** before merging into the main branch.  
+
 
 ---
 
