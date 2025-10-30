@@ -25,7 +25,7 @@ The purpose of this project is to bridge the gap between traditional learning an
 The **Empowering the Nation Website** serves as the **public-facing platform**, offering visitors:  
 - A welcoming homepage introducing the organisation.  
 - Clear navigation with sections for **Courses**, **Quotation**, and **Contact**.  
-- A professional **colour scheme** (navy blue `#003366`, white, grey, and yellow) consistent with the brand identity.  
+- A professional **colour scheme** (navy blue , white, grey, and yellow) consistent with the brand identity.  
 - Embedded **Google Map** showing the **main branch location** for easy access and credibility.  
 - A clean, accessible layout built with **HTML, CSS, and JavaScript**, ensuring compatibility across devices.  
 
