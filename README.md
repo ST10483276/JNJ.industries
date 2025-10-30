@@ -96,7 +96,7 @@ The project was a shared effort with clear roles and mutual support:
 |-----------|-------------|
 | Website | HTML5, CSS3, JavaScript, Google Maps API |
 | Android App | Android Studio, Kotlin, XML |
-| Design | Canva, Unsplash (for visuals), Google Fonts |
+| Design | Canva, Unsplash (for visuals), Google Fonts, Figma |
 | Collaboration | GitHub, Microsoft Teams |
 
 ---
