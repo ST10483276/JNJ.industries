@@ -8,7 +8,7 @@
 **Submission Date:** 31st October 2025  
 **Module:** Work Integrated Learning (WIL) – 2025  
 **Project Type:** Collaborative Web + Mobile Application  
-**Submission Repositories:**  
+**Submission Repositories:**  https://github.com/ST10483276/JNJ.industries.git
 
 ---
 
@@ -126,12 +126,31 @@ The project was a shared effort with clear roles and mutual support:
 
 ---
 
+
+
 ## References  
 
-- Canva. 2025. *Empowering Hands Collaboration Design.* [online] Available at: <https://www.canva.com> [Accessed 29 October 2025].  
-- Canva. 2025. *Sewing Course Promotion Graphic.* [online] Available at: <https://www.canva.com> [Accessed 29 October 2025].  
-- Canva. 2025. *Community Support Visual (Hands Together).* [online] Available at: <https://www.canva.com> [Accessed 29 October 2025].  
-- Canva. 2025. *Empowerment Map Illustration.* [online] Available at: <https://www.canva.com> [Accessed 29 October 2025].  
-- Canva. 2025. *Inclusive Learning Poster Design.* [online] Available at: <https://www.canva.com> [Accessed 29 October 2025].  
-- Unsplash. 2025. *Tailoring Training Image.* [online] Available at: <https://unsplash.com> [Accessed 29 October 2025].  
-- Unsplash. 2025. *Hands Collaboration Photograph.* [online] Available at: <https://unsplash.com> [Accessed 29 October 2025].  
+1. Nohat.cc. (2024). *Unity in Diversity: Interconnected Around the Globe.* [online] Available at: <https://nohat.cc/f/unity-in-diversity-interconnected-around-the-globe/gzDbobCn-202412080102.html> [Accessed 12 Oct. 2025].  
+
+2. Thebuzzonhr.com. (2017). *Key to Black Unity.* [online] Available at: <https://thebuzzonhr.com/1-key-to-black-unity/> [Accessed 9 Oct. 2025].  
+
+3. Canva. (2025). *Empowering the Nation Project Visual Assets.* [online] Available at: <https://www.canva.com> [Accessed 14 Aug. 2025].  
+
+4. YouTube. (2023). *Step by Step Google Maps Implementation in Android App | Google Maps in Android: Step-by-Step Guide.* [online] Available at: <https://www.youtube.com/watch?v=pOKPQ8rYe6g> [Accessed 1 Oct. 2025].  
+
+5. Hauert. (2025). *Semer des graines germant au froid (jardin et réfrigérateur): Voici comment faire | HAUERT.* [online] Available at: <https://www.hauert.com/ch-fr/offre/particuliers/guide/detail/germes-froids> [Accessed 14 Sep. 2025].  
+
+6. Issuu. (2022). *Couture - Issuu.* [online] Available at: <https://issuu.com/jayus/docs/le_guide_d_orientation_de_la_filie_re_mode_et_luxe_/s/17597824> [Accessed 13 Sep. 2025].  
+
+7. iStock. (2014). *Spring Activities in Garden, Man Cut the Lawn Silhouette.* [online] Available at: <https://www.istockphoto.com/vector/spring-activities-in-garden-man-cut-the-lawn-gm487881985-39319844> [Accessed 12 Sep. 2025].  
+
+8. Adraesthetic.com. (2025). *Expert Contracting by ADR Aesthetic Design & Restoration.* [online] Available at: <https://adraesthetic.com/project-management> [Accessed 11 Sep. 2025].  
+
+9. Unsplash. (2025). *Hands Collaboration and Tailoring Images.* [online] Available at: <https://unsplash.com> [Accessed 22 Sep. 2025].  
+
+10. Unsplash. (2025). *Hands Collaboration Photograph.* [online] Available at: <https://unsplash.com> [Accessed 29 Oct. 2025].  
+
+---
+
+
+---
